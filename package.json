@@ -18,12 +18,14 @@
   "homepage": "https://github.com/vsbdn/repair-design#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-cssmin": "^0.2.0",
     "gulp-sass": "^4.1.0",
     "node-sass": "^4.14.0"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "gulp-shorthand": "^1.1.0"
   }
 }
