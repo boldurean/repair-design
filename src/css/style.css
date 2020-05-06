@@ -303,6 +303,15 @@ template {
 [hidden] {
   display: none; }
 
+.button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase; }
+  .button--primary {
+    background-color: #E3B873;
+    color: #ffffff; }
+
 .container {
   max-width: 1256px;
   margin: auto; }
@@ -319,6 +328,18 @@ template {
 .logo {
   color: #E3B873;
   text-transform: uppercase; }
+
+.nav__item {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-right: 40px; }
+
+.phone {
+  color: #E3B873; }
+
+.contacts__phone {
+  margin-right: 45px; }
 
 body {
   font-family: sans-serif;

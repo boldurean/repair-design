@@ -12,20 +12,21 @@ function minify() {
 }
 
 function style() {
-  return src('./src/sass/**/*.sass')
+  return src('./src/sass/*.sass')
       .pipe(sass())
       .pipe(dest('./src/css'))
       .pipe(browserSync.stream())
 }
 
 function server() {
+  style();
   browserSync.init({
     server: {
       baseDir: "./src/"
     }
   })
   watch("./src/sass/**/*.sass", style);
-  watch("./src/js/**/*.js", style);
+  watch("./src/js/**/*.js").on('change', browserSync.reload);
   watch("./src/*.html").on('change', browserSync.reload);
 }
 
