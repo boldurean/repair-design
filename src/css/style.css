@@ -370,7 +370,7 @@ template {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #131313 url("src/img/hero-bg.jpg") no-repeat center/cover;
+  background: #131313 url("../img/bg-hero.jpg") no-repeat center/cover;
   height: 100vh;
   padding-top: 100px;
   color: #ffffff; }
