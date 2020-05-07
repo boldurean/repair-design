@@ -325,8 +325,13 @@ template {
   .button--primary {
     background-color: #E3B873;
     color: #ffffff; }
+  .button--outline {
+    background-color: transparent;
+    border: solid 1px #ffffff;
+    color: #ffffff; }
 
 .container {
+  width: 85%;
   max-width: 1256px;
   margin: auto; }
 
@@ -362,10 +367,18 @@ template {
 
 .hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: #131313 url("../../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   padding-top: 100px;
   color: #ffffff; }
+  .hero__content {
+    max-width: 670px; }
+  .hero__text {
+    font-size: 22px;
+    max-width: 504px; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -398,7 +411,13 @@ template {
     transform: rotate(90deg); }
 
 .title {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 1.33; }
+  .title--primary {
+    color: #E3B873; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
