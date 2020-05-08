@@ -348,6 +348,21 @@ body {
   font-family: Futura Book, sans-serif;
   font-size: 14px; }
 
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', cursive; }
+  .section-title__image {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .section-title__image::before, .section-title__image::after {
+      content: '';
+      width: 32px;
+      height: 2px;
+      background-color: #E3B873;
+      margin: 0 10px; }
+
 .header {
   position: fixed;
   top: 0;
