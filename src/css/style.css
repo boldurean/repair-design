@@ -408,9 +408,8 @@ body {
 .contacts__phone {
   margin-right: 45px;
   color: #E3B873; }
-
-.contacts:hover {
-  text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9); }
+  .contacts__phone:hover {
+    text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9); }
 
 .hero {
   position: relative;
