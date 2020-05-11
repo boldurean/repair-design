@@ -15,6 +15,10 @@
 .logo
   color: $primary
   text-transform: uppercase
+  transition: 0.3s
+  &:hover
+    text-shadow: 0px 5px 20px rgba($primary, 0.9)
+    cursor: pointer
 
 
 .nav
@@ -22,13 +26,15 @@
     text-decoration: none
     color: $light
     text-transform: uppercase
-    margin-right: 40px
+    margin-right: 2.85rem
     transition: color 0.2s
     &:hover
       color: $primary
 
 .phone
   color: $primary
+  &:hover
+    text-shadow: 0 5px 20px rgba($primary, 0.9)
 
 .contacts
   &__phone
