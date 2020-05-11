@@ -318,11 +318,11 @@ template {
   display: none; }
 
 .button {
-  padding: 13px 20px;
+  padding: 11px 24px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  font-size: 0.93rem; }
+  font-size: 0.928rem; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
@@ -389,16 +389,17 @@ body {
 .logo {
   color: #E3B873;
   text-transform: uppercase;
+  font-size: 1.075rem;
   transition: 0.3s; }
   .logo:hover {
-    text-shadow: 0px 5px 20px rgba(227, 184, 115, 0.9);
+    text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9);
     cursor: pointer; }
 
 .nav__item {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
-  margin-right: 2.85rem;
+  margin-right: 2.65rem;
   transition: color 0.2s; }
   .nav__item:hover {
     color: #E3B873; }
@@ -432,20 +433,25 @@ body {
     position: relative;
     margin-left: 4.28rem;
     max-width: 47.85rem; }
+  .hero__title {
+    margin-bottom: 1.2rem; }
   .hero__text {
     font-size: 1.57rem;
-    max-width: 504px; }
+    max-width: 504px;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 3rem; }
   .hero__button {
-    margin-right: 20px; }
+    padding: 19px 28px;
+    margin-right: 18px; }
+  .hero .button--outline {
+    padding: 18px 45px; }
   .hero__instagram {
     position: absolute;
     left: 0;
     top: 0;
     max-width: 82px;
     height: 100%; }
-    .hero__instagram .instagram__link:hover {
-      text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9);
-      cursor: pointer; }
   .hero__scroll-down {
     position: absolute;
     display: flex;
@@ -455,8 +461,11 @@ body {
     bottom: 0;
     min-width: 17.6rem;
     min-height: 6.92rem;
+    font-family: 'Yeseva One', cursive;
+    font-size: 0.85rem;
     text-transform: uppercase;
     text-decoration: none;
+    line-height: 138.6%;
     color: #ffffff;
     background: #131313; }
     .hero__scroll-down::after {
@@ -466,7 +475,7 @@ body {
       background: url("../img/arrow-down.svg") no-repeat center;
       border: 2px solid #E3B873;
       border-radius: 50%;
-      margin-left: 12px; }
+      margin-left: 18px; }
 
 .instagram {
   display: flex;
@@ -480,16 +489,21 @@ body {
     color: #E3B873;
     text-decoration: none;
     transform: rotate(90deg);
-    line-height: 0.8; }
+    font-family: 'Futura Demi', cursive;
+    font-size: 1rem;
+    line-height: 16px; }
+    .instagram__link:hover {
+      text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9);
+      cursor: pointer; }
     .instagram__link::after {
       content: "";
       width: 50px;
       height: 1px;
       background-color: #E3B873;
-      margin-left: 8px; }
+      margin-left: 8px;
+      align-items: center; }
 
 .title {
-  margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
