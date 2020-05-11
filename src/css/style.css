@@ -343,7 +343,7 @@ template {
       border: 1px solid #E3B873; }
 
 .container {
-  width: 85%;
+  width: 90%;
   max-width: 1256px;
   margin: auto; }
 
@@ -378,7 +378,7 @@ body {
   left: 0;
   width: 100%;
   background-color: #131313;
-  padding: 24px 0;
+  padding: 23px 0;
   z-index: 99; }
 
 .menu {
@@ -400,17 +400,17 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   margin-right: 2.65rem;
-  transition: color 0.2s; }
+  transition: color 0.2s;
+  line-height: 0.8; }
   .nav__item:hover {
     color: #E3B873; }
 
-.phone {
-  color: #E3B873; }
-  .phone:hover {
-    text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9); }
-
 .contacts__phone {
-  margin-right: 45px; }
+  margin-right: 45px;
+  color: #E3B873; }
+
+.contacts:hover {
+  text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9); }
 
 .hero {
   position: relative;
@@ -450,7 +450,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    max-width: 82px;
+    max-width: 86.7px;
     height: 100%; }
   .hero__scroll-down {
     position: absolute;
@@ -459,6 +459,7 @@ body {
     align-items: center;
     left: 0;
     bottom: 0;
+    transform: translateY(50%);
     min-width: 17.6rem;
     min-height: 6.92rem;
     font-family: 'Yeseva One', cursive;
@@ -510,6 +511,10 @@ body {
   line-height: 1.33; }
   .title--primary {
     color: #E3B873; }
+
+@media screen and (max-width: 1275px) {
+  .nav__item {
+    margin-right: 1rem; } }
 
 @media screen and (max-width: 1200px) {
   html {
