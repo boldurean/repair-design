@@ -13,11 +13,30 @@
 @media screen and (max-width: 992px)
   .nav
     display: none
+  .logo
+    &:hover
+      text-shadow: none
   .hero
     &__instagram
       display: none
     &__content
       margin-left: 0
+    &__scroll-down
+      &:hover
+        text-shadow: none
+        color: $light
+  .button
+    &--primary
+      box-shadow: none
+    &--outline
+      &:hover
+        box-shadow: none
+        color: white
+        border: 1px solid $light
+  .contacts
+    &__phone
+      &:hover
+        text-shadow: none
 
 @media screen and (max-width: 570px)
   .contacts

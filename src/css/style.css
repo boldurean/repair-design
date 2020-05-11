@@ -467,7 +467,11 @@ body {
     text-decoration: none;
     line-height: 138.6%;
     color: #ffffff;
-    background: #131313; }
+    background: #131313;
+    transition: text-shadow 0.3s; }
+    .hero__scroll-down:hover {
+      color: #E3B873;
+      text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9); }
     .hero__scroll-down::after {
       content: '';
       width: 30px;
@@ -524,10 +528,23 @@ body {
 @media screen and (max-width: 992px) {
   .nav {
     display: none; }
+  .logo:hover {
+    text-shadow: none; }
   .hero__instagram {
     display: none; }
   .hero__content {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .hero__scroll-down:hover {
+    text-shadow: none;
+    color: #ffffff; }
+  .button--primary {
+    box-shadow: none; }
+  .button--outline:hover {
+    box-shadow: none;
+    color: white;
+    border: 1px solid #ffffff; }
+  .contacts__phone:hover {
+    text-shadow: none; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {

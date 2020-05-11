@@ -56,6 +56,10 @@
     line-height: 138.6%
     color: $light
     background: $dark
+    transition: text-shadow 0.3s
+    &:hover
+      color: $primary
+      text-shadow: 0 5px 20px rgba($primary, 0.9)
     &::after
       content: ''
       width: 30px
@@ -64,6 +68,7 @@
       border: 2px solid $primary
       border-radius: 50%
       margin-left: 18px
+
 .instagram
   display: flex
   justify-content: center
