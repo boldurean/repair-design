@@ -329,6 +329,7 @@ template {
     cursor: pointer; }
   .button--primary {
     background-color: #E3B873;
+    border: 1px solid #E3B873;
     color: #ffffff; }
   .button--outline {
     background-color: transparent;
@@ -459,7 +460,6 @@ img {
     margin-right: 18px;
     line-height: 3.642rem; }
   .hero .button--outline {
-    min-height: 51px;
     padding: 0 42px;
     line-height: 3.642rem; }
   .hero__instagram {
