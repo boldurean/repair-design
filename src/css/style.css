@@ -336,8 +336,8 @@ template {
     color: #ffffff; }
 
 .container {
-  width: 90%;
-  max-width: 1256px;
+  width: 88%;
+  max-width: 1240px;
   margin: auto; }
 
 *, *::before, *::after {
@@ -350,20 +350,27 @@ body {
   font-family: 'Futura Book', sans-serif;
   font-size: 1rem; }
 
-.section-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Yeseva One', serif; }
-  .section-title__image {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .section-title__image::before, .section-title__image::after {
-      content: '';
-      width: 32px;
-      height: 2px;
-      background-color: #E3B873;
-      margin: 0 10px; }
+img {
+  max-width: 100%; }
+
+.section {
+  padding: 60px 0; }
+  .section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', serif; }
+    .section-title__heading {
+      font-size: 1.428rem; }
+    .section-title__image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-title__image::before, .section-title__image::after {
+        content: '';
+        width: 32px;
+        height: 2px;
+        background-color: #E3B873;
+        margin: 0 10px; }
 
 .header {
   position: fixed;
@@ -392,7 +399,7 @@ body {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
-  margin-right: 2.65rem;
+  margin-right: 2.60rem;
   transition: color 0.2s;
   line-height: 0.8; }
   .nav__item:hover {
@@ -517,9 +524,68 @@ body {
   .title--primary {
     color: #E3B873; }
 
-@media screen and (max-width: 1275px) {
-  .nav__item {
-    margin-right: 1rem; } }
+.types__section-title {
+  margin-bottom: 2.21rem; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col {
+  flex-basis: 32%; }
+
+.card__text {
+  position: relative;
+  margin: 0 auto;
+  margin-top: -9.33rem;
+  padding: 1.79rem 2.14rem;
+  max-width: 23.6rem;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.03);
+  background-color: #ffffff; }
+
+.card__title {
+  font-family: 'Yeseva One', serif;
+  font-size: 1.29rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem; }
+
+.card__list {
+  padding: 0;
+  margin: 0;
+  margin-left: 1rem;
+  font-size: 1.07rem;
+  font-weight: normal;
+  line-height: 1.79rem;
+  color: #959595;
+  margin-bottom: 2.2rem; }
+
+.card__pricetag {
+  position: absolute;
+  left: 0;
+  bottom: -2.10rem;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', serif;
+  font-size: 1.29rem;
+  font-weight: normal;
+  line-height: 1.39;
+  background-color: #E3B873;
+  color: #ffffff;
+  padding: 1.1rem 2.5rem; }
+
+.design__section-title {
+  margin-bottom: 1.579rem; }
+
+.design__description {
+  margin: auto;
+  margin-bottom: 3.5rem;
+  max-width: 52.928rem;
+  text-align: center;
+  font-family: 'Futura Book', sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #363636; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -537,26 +603,104 @@ body {
   .hero__content {
     margin-left: 0; } }
 
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .types__card, .design__card {
+    margin-bottom: 4.29rem; }
+  .card__text {
+    margin-left: 0; } }
+
 @media screen and (max-width: 576px) {
   .contacts__phone {
+    font-size: 12px;
     margin-right: 0;
     color: #ffffff;
     text-decoration: none; }
   .contacts__button {
     display: none; }
-  .hero__scroll-down {
-    display: none; }
-  .hero__content {
-    max-width: 22.86rem; }
-  .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
-  .hero__button {
-    display: block;
-    min-width: 22.86rem;
-    margin-bottom: 1.85rem; }
+  .hero {
+    padding-top: 60px; }
+    .hero__scroll-down {
+      display: none; }
+    .hero__content {
+      max-width: 470px; }
+    .hero__text {
+      font-size: 18px;
+      margin-bottom: 2.28rem; }
+    .hero__button {
+      min-width: 100%;
+      display: block;
+      margin-bottom: 2.1rem;
+      font-size: 13px; }
+      .hero__button--outline {
+        font-size: 13px; }
   .title {
-    font-size: 1.64rem; } }
+    max-width: 30rem;
+    font-size: 23px; } }
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: 95%;
+    max-width: 338.6px;
+    margin: auto; }
+  .hero {
+    max-height: 533px;
+    padding-top: 57px; }
+    .hero__content {
+      padding-top: 50px;
+      width: 100%; }
+    .hero__text {
+      margin-bottom: 2.6rem;
+      max-width: 321px;
+      font-size: 18px;
+      width: 321px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 135.84%; }
+    .hero__button {
+      min-width: 100%;
+      font-size: 13px; }
+      .hero__button--outline {
+        font-size: 13px; }
+  .title {
+    font-size: 23px;
+    font-weight: normal; }
+  .contacts__phone {
+    font-size: 12px; }
+  .section-title__heading {
+    font-size: 22px; }
+  .card__text {
+    margin-top: -12.03rem;
+    margin-bottom: 5.79rem;
+    padding: 1.79rem 2.54rem;
+    max-width: 270px; }
+  .card__title {
+    font-size: 15px;
+    margin-bottom: 0.8rem; }
+  .card__list {
+    font-size: 13px;
+    line-height: 1.7; }
+    .card__list--full {
+      max-height: 153px;
+      overflow: hidden;
+      text-overflow: clip;
+      white-space: nowrap; }
+  .card__pricetag {
+    font-size: 15px;
+    min-width: 190.4px;
+    min-height: 40px;
+    bottom: -0.9rem;
+    padding: 0.8rem 2.4rem; }
+  .types__section-title {
+    margin-bottom: 3.31rem; }
+  .design__description {
+    font-size: 15px;
+    line-height: 1.36;
+    max-width: 303px;
+    margin-bottom: 2.9rem; } }
 
 @media screen and (max-height: 600px) {
   .hero__scroll-down {
