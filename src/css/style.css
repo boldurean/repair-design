@@ -399,7 +399,7 @@ img {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
-  margin-right: 2.60rem;
+  margin-right: 2.65rem;
   transition: color 0.2s;
   line-height: 0.8; }
   .nav__item:hover {
@@ -587,7 +587,7 @@ img {
   font-weight: normal;
   color: #363636; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1210px) {
   html {
     font-size: 12px; }
   .nav__item {
