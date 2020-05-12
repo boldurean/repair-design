@@ -500,27 +500,26 @@ img {
   background: #131313; }
   .instagram__link {
     display: flex;
+    align-items: center;
     text-transform: uppercase;
     color: #E3B873;
     text-decoration: none;
     transform: rotate(90deg);
     font-family: 'Futura Demi', sans-serif;
-    font-size: 1rem;
-    line-height: 0.3; }
+    font-size: 1rem; }
     .instagram__link::after {
       content: "";
       width: 50px;
       height: 2px;
       background-color: #E3B873;
-      margin-left: 13px;
-      vertical-align: middle;
-      align-items: center; }
+      margin-left: 13px; }
 
 .title {
   font-family: 'Yeseva One', serif;
   text-transform: uppercase;
   font-size: 2.857rem;
-  line-height: 1.33; }
+  line-height: 1.33;
+  font-weight: normal; }
   .title--primary {
     color: #E3B873; }
 
