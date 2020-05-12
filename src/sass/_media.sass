@@ -110,8 +110,15 @@
       &--full
         max-height: 153px
         overflow: hidden
-        text-overflow: clip
         white-space: nowrap
+        text-overflow: ellipsis
+    &__item
+      &--dots
+        &:after
+          content: "..."
+          color: $secondary
+
+
     &__pricetag
       font-size: 15px
       min-width: 190.4px

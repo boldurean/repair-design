@@ -686,8 +686,11 @@ img {
     .card__list--full {
       max-height: 153px;
       overflow: hidden;
-      text-overflow: clip;
-      white-space: nowrap; }
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+  .card__item--dots:after {
+    content: "...";
+    color: #959595; }
   .card__pricetag {
     font-size: 15px;
     min-width: 190.4px;
