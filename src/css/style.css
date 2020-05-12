@@ -586,7 +586,7 @@ img {
   font-weight: normal;
   color: #363636; }
 
-@media screen and (max-width: 1210px) {
+@media screen and (max-width: 1250px) {
   html {
     font-size: 12px; }
   .nav__item {
@@ -645,7 +645,6 @@ img {
     max-width: 338.6px;
     margin: auto; }
   .hero {
-    max-height: 533px;
     padding-top: 57px; }
     .hero__content {
       padding-top: 50px;
@@ -654,7 +653,6 @@ img {
       margin-bottom: 2.6rem;
       max-width: 321px;
       font-size: 18px;
-      width: 321px;
       font-weight: normal;
       font-stretch: normal;
       font-style: normal;
@@ -704,7 +702,7 @@ img {
     max-width: 303px;
     margin-bottom: 2.9rem; } }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 615px) {
   .hero__scroll-down {
     display: none; } }
 
