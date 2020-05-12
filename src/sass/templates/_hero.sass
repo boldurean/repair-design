@@ -27,12 +27,16 @@
     max-width: 504px
     line-height: 2.14rem
     margin: 0
-    margin-bottom: 3rem
+    margin-bottom: 3.4rem
   &__button
-    padding: 18px 26px
+    min-height: 51px
+    padding: 0 26px
     margin-right: 18px
+    line-height: 3.642rem
   .button--outline
-    padding: 18px 42px
+    min-height: 51px
+    padding: 0 42px
+    line-height: 3.642rem
 
   &__instagram
     position: absolute
@@ -56,10 +60,6 @@
     line-height: 138.6%
     color: $light
     background: $dark
-    transition: text-shadow 0.3s
-    &:hover
-      color: $primary
-      text-shadow: 0 5px 20px rgba($primary, 0.9)
     &::after
       content: ''
       width: 30px
@@ -76,7 +76,6 @@
   background: $dark
   &__link
     display: flex
-    //align-items: center
     text-transform: uppercase
     color: $primary
     text-decoration: none
@@ -84,10 +83,6 @@
     font-family: 'Futura Demi', sans-serif
     font-size: 1rem
     line-height: 0.3
-    transition: text-shadow 0.3s
-    &:hover
-      text-shadow: 0 5px 20px rgba($primary, 0.9)
-      cursor: pointer
     &::after
       content: ""
       width: 50px

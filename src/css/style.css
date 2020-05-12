@@ -329,20 +329,11 @@ template {
     cursor: pointer; }
   .button--primary {
     background-color: #E3B873;
-    color: #ffffff;
-    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.5);
-    transition: box-shadow 0.3s; }
-    .button--primary:hover {
-      box-shadow: none; }
+    color: #ffffff; }
   .button--outline {
     background-color: transparent;
     border: 1px solid #ffffff;
-    color: #ffffff;
-    transition: 0.3s; }
-    .button--outline:hover {
-      box-shadow: 0 5px 15px rgba(227, 184, 115, 0.5);
-      color: #E3B873;
-      border: 1px solid #E3B873; }
+    color: #ffffff; }
 
 .container {
   width: 90%;
@@ -391,13 +382,11 @@ body {
 .logo {
   color: #E3B873;
   text-transform: uppercase;
-  font-size: 1.075rem;
+  font-size: 1rem;
   font-family: "Futura Demi", sans-serif;
   font-weight: normal;
-  transition: 0.3s; }
-  .logo:hover {
-    text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9);
-    cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
 
 .nav__item {
   text-decoration: none;
@@ -456,12 +445,16 @@ body {
     max-width: 504px;
     line-height: 2.14rem;
     margin: 0;
-    margin-bottom: 3rem; }
+    margin-bottom: 3.4rem; }
   .hero__button {
-    padding: 18px 26px;
-    margin-right: 18px; }
+    min-height: 51px;
+    padding: 0 26px;
+    margin-right: 18px;
+    line-height: 3.642rem; }
   .hero .button--outline {
-    padding: 18px 42px; }
+    min-height: 51px;
+    padding: 0 42px;
+    line-height: 3.642rem; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -483,11 +476,7 @@ body {
     text-decoration: none;
     line-height: 138.6%;
     color: #ffffff;
-    background: #131313;
-    transition: text-shadow 0.3s; }
-    .hero__scroll-down:hover {
-      color: #E3B873;
-      text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9); }
+    background: #131313; }
     .hero__scroll-down::after {
       content: '';
       width: 30px;
@@ -510,11 +499,7 @@ body {
     transform: rotate(90deg);
     font-family: 'Futura Demi', sans-serif;
     font-size: 1rem;
-    line-height: 0.3;
-    transition: text-shadow 0.3s; }
-    .instagram__link:hover {
-      text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9);
-      cursor: pointer; }
+    line-height: 0.3; }
     .instagram__link::after {
       content: "";
       width: 50px;
@@ -547,23 +532,10 @@ body {
 @media screen and (max-width: 992px) {
   .nav {
     display: none; }
-  .logo:hover {
-    text-shadow: none; }
   .hero__instagram {
     display: none; }
   .hero__content {
-    margin-left: 0; }
-  .hero__scroll-down:hover {
-    text-shadow: none;
-    color: #ffffff; }
-  .button--primary {
-    box-shadow: none; }
-  .button--outline:hover {
-    box-shadow: none;
-    color: white;
-    border: 1px solid #ffffff; }
-  .contacts__phone:hover {
-    text-shadow: none; } }
+    margin-left: 0; } }
 
 @media screen and (max-width: 576px) {
   .contacts__phone {
@@ -589,3 +561,45 @@ body {
 @media screen and (max-height: 600px) {
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (min-width: 992px) {
+  .nav__item {
+    transition: color 0.2s; }
+    .nav__item:hover {
+      color: #E3B873; }
+  .logo {
+    transition: 0.3s; }
+    .logo:hover {
+      text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9);
+      cursor: pointer; }
+  .contacts__phone {
+    transition: text-shadow 0.3s; }
+    .contacts__phone:hover {
+      text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9); }
+  .button:hover {
+    cursor: pointer; }
+  .button--primary {
+    transition: box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.5); }
+    .button--primary:hover {
+      box-shadow: none; }
+  .button--outline {
+    transition: box-shadow 0.3s; }
+    .button--outline:hover {
+      box-shadow: 0 5px 15px rgba(227, 184, 115, 0.5);
+      color: #E3B873;
+      border: 1px solid #E3B873; }
+  .hero__scroll-down {
+    transition: text-shadow 0.3s; }
+    .hero__scroll-down:hover {
+      color: #E3B873;
+      text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9); }
+  .hero__link {
+    transition: text-shadow 0.3s; }
+    .hero__link:hover {
+      text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9);
+      cursor: pointer; }
+  .instagram__link {
+    transition: text-shadow 0.3s; }
+    .instagram__link:hover {
+      text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9); } }

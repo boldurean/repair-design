@@ -16,30 +16,12 @@
 @media screen and (max-width: 992px)
   .nav
     display: none
-  .logo
-    &:hover
-      text-shadow: none
   .hero
     &__instagram
       display: none
     &__content
       margin-left: 0
-    &__scroll-down
-      &:hover
-        text-shadow: none
-        color: $light
-  .button
-    &--primary
-      box-shadow: none
-    &--outline
-      &:hover
-        box-shadow: none
-        color: white
-        border: 1px solid $light
-  .contacts
-    &__phone
-      &:hover
-        text-shadow: none
+
 
 @media screen and (max-width: 576px)
   .contacts
@@ -64,7 +46,59 @@
   .title
     font-size: 1.64rem
 
+//height
 @media screen and (max-height: 600px)
   .hero
     &__scroll-down
       display: none
+
+//HOVER EFFECTS APPEAR
+@media screen and (min-width: 992px)
+  .nav
+    &__item
+      transition: color 0.2s
+      &:hover
+        color: $primary
+
+  .logo
+    transition: 0.3s
+    &:hover
+      text-shadow: 0 5px 20px rgba($primary, 0.9)
+      cursor: pointer
+
+  .contacts
+    &__phone
+      transition: text-shadow 0.3s
+      &:hover
+        text-shadow: 0 5px 20px rgba($primary, 0.9)
+
+  .button
+    &:hover
+      cursor: pointer
+    &--primary
+      transition: box-shadow 0.3s
+      box-shadow: 0 5px 15px rgba($primary, 0.5)
+      &:hover
+        box-shadow: none
+    &--outline
+      transition: box-shadow 0.3s
+      &:hover
+        box-shadow: 0 5px 15px rgba($primary, 0.5)
+        color: $primary
+        border: 1px solid $primary
+  .hero
+    &__scroll-down
+      transition: text-shadow 0.3s
+      &:hover
+        color: $primary
+        text-shadow: 0 5px 20px rgba($primary, 0.9)
+    &__link
+      transition: text-shadow 0.3s
+      &:hover
+        text-shadow: 0 5px 20px rgba($primary, 0.9)
+        cursor: pointer
+  .instagram
+    &__link
+      transition: text-shadow 0.3s
+      &:hover
+        text-shadow: 0 5px 20px rgba($primary, 0.9)
