@@ -20,18 +20,19 @@
     margin-left: 4.28rem
     max-width: 47.85rem
   &__title
+    margin-top: 0
     margin-bottom: 1.2rem
   &__text
     font-size: 1.57rem
     max-width: 504px
-    line-height: 30px
+    line-height: 2.14rem
     margin: 0
     margin-bottom: 3rem
   &__button
-    padding: 19px 28px
+    padding: 18px 26px
     margin-right: 18px
   .button--outline
-    padding: 18px 45px
+    padding: 18px 42px
 
   &__instagram
     position: absolute
@@ -46,10 +47,9 @@
     align-items: center
     left: 0
     bottom: 0
-    transform: translateY(50%)
     min-width: 17.6rem
     min-height: 6.92rem
-    font-family: 'Yeseva One', cursive
+    font-family: 'Yeseva One', serif
     font-size: 0.85rem
     text-transform: uppercase
     text-decoration: none
@@ -76,27 +76,29 @@
   background: $dark
   &__link
     display: flex
-    align-items: center
+    //align-items: center
     text-transform: uppercase
     color: $primary
     text-decoration: none
     transform: rotate(90deg)
-    font-family: 'Futura Demi', cursive
+    font-family: 'Futura Demi', sans-serif
     font-size: 1rem
-    line-height: 16px
+    line-height: 0.3
+    transition: text-shadow 0.3s
     &:hover
       text-shadow: 0 5px 20px rgba($primary, 0.9)
       cursor: pointer
     &::after
       content: ""
       width: 50px
-      height: 1px
+      height: 2px
       background-color: $primary
-      margin-left: 8px
+      margin-left: 13px
+      vertical-align: middle
       align-items: center
 
 .title
-  font-family: 'Yeseva One', cursive
+  font-family: 'Yeseva One', serif
   text-transform: uppercase
   font-size: 2.857rem
   line-height: 1.33
