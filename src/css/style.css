@@ -623,6 +623,8 @@ img {
 .modal {
   position: fixed;
   z-index: 199;
+  opacity: 0;
+  visibility: hidden;
   top: 0;
   right: 0;
   bottom: 0;
@@ -633,6 +635,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
   .modal__dialog {
     position: relative;
     max-width: 36.36rem;
