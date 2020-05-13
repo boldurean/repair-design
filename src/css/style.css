@@ -437,8 +437,6 @@ img {
   margin-right: 2.65rem;
   transition: color 0.2s;
   line-height: 0.8; }
-  .nav__item:hover {
-    color: #E3B873; }
 
 .contacts__phone {
   margin-right: 45px;
@@ -447,8 +445,6 @@ img {
   font-weight: normal;
   color: #E3B873;
   transition: text-shadow 0.3s; }
-  .contacts__phone:hover {
-    text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9); }
 
 .contacts__button {
   min-width: 160px;
@@ -724,10 +720,8 @@ img {
       font-size: 18px;
       margin-bottom: 2.28rem; }
     .hero__button {
-      min-width: 100%;
       display: block;
-      margin-bottom: 2.1rem;
-      font-size: 13px; }
+      margin-bottom: 2.1rem; }
       .hero__button--outline {
         font-size: 13px; }
   .title {
@@ -742,7 +736,6 @@ img {
   .hero {
     padding-top: 57px; }
     .hero__content {
-      padding-top: 50px;
       width: 100%; }
     .hero__text {
       margin-bottom: 2.6rem;
@@ -815,8 +808,6 @@ img {
     transition: text-shadow 0.3s; }
     .contacts__phone:hover {
       text-shadow: 0 5px 20px rgba(227, 184, 115, 0.9); }
-  .button:hover {
-    cursor: pointer; }
   .button--primary {
     transition: box-shadow 0.3s;
     box-shadow: 0 5px 15px rgba(227, 184, 115, 0.5); }
