@@ -612,6 +612,8 @@ img {
     margin-left: 0; } }
 
 @media screen and (max-width: 576px) {
+  .container {
+    max-width: 80%; }
   .contacts__phone {
     font-size: 12px;
     margin-right: 0;
@@ -624,7 +626,8 @@ img {
     .hero__scroll-down {
       display: none; }
     .hero__content {
-      max-width: 470px; }
+      margin: auto;
+      max-width: 350px; }
     .hero__text {
       font-size: 18px;
       margin-bottom: 2.28rem; }
