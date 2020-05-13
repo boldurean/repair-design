@@ -1,0 +1,55 @@
+.modal
+  position: fixed
+  z-index: 199
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($dark, 0.6)
+  display: flex
+  justify-content: center
+  align-items: center
+  &__dialog
+    position: relative
+    max-width: 36.36rem
+    padding: 2.357rem 3.6rem 1.928rem
+    color: $light
+    background: $dark url("../img/modal/bg-lines.svg") no-repeat center
+  &__close
+    position: absolute
+    margin: 12px 13px
+    top: 0
+    right: 0
+    width: 28px
+    height: 28px
+    border: none
+    background: transparent url('../img/modal/x-circle.svg') no-repeat center
+    cursor: pointer
+  &__title
+    margin-top: 0
+    margin-bottom: 2.028rem
+    font-family: $yoseva
+    font-size: 1.357rem
+    font-weight: normal
+    text-align: center
+    line-height: 1.39
+  &__form
+    display: flex
+    flex-direction: column
+  &__policy
+    margin-bottom: 2.7rem
+  &__input
+    margin-bottom: 3.328rem
+    &:last-of-type
+      margin-bottom: -0.2rem
+    &:nth-of-type(2)
+      margin-bottom: 3.3rem
+  &__button
+    align-self: flex-end
+    padding: 1.214rem 3.214rem
+    border-radius: 0
+
+
+

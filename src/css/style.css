@@ -336,6 +336,40 @@ template {
     border: 1px solid #ffffff;
     color: #ffffff; }
 
+.label {
+  font-size: 1.071rem; }
+  .label--light {
+    color: rgba(255, 255, 255, 0.5); }
+
+.input {
+  font-size: 1.285714rem;
+  color: #ffffff;
+  border: none;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  background: transparent;
+  padding: 0.5rem 0; }
+  .input::placeholder {
+    color: #ffffff; }
+
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden; }
+  .policy__checkbox:checked + .policy__label:before {
+    background: #E3B873 url("../img/modal/checked.svg") no-repeat center/10px; }
+
+.policy__label {
+  display: flex;
+  font-size: 16px;
+  align-items: center; }
+  .policy__label:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid #E3B873;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-right: 0.64rem; }
+
 .container {
   width: 88%;
   max-width: 1240px;
@@ -450,7 +484,7 @@ img {
     margin-bottom: 1.2rem; }
   .hero__text {
     font-size: 1.57rem;
-    max-width: 504px;
+    max-width: 36rem;
     line-height: 2.14rem;
     margin: 0;
     margin-bottom: 3.4rem; }
@@ -586,6 +620,59 @@ img {
   font-weight: normal;
   color: #363636; }
 
+.modal {
+  position: fixed;
+  z-index: 199;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modal__dialog {
+    position: relative;
+    max-width: 36.36rem;
+    padding: 2.357rem 3.6rem 1.928rem;
+    color: #ffffff;
+    background: #131313 url("../img/modal/bg-lines.svg") no-repeat center; }
+  .modal__close {
+    position: absolute;
+    margin: 12px 13px;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: transparent url("../img/modal/x-circle.svg") no-repeat center;
+    cursor: pointer; }
+  .modal__title {
+    margin-top: 0;
+    margin-bottom: 2.028rem;
+    font-family: "Yeseva One", serif;
+    font-size: 1.357rem;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.39; }
+  .modal__form {
+    display: flex;
+    flex-direction: column; }
+  .modal__policy {
+    margin-bottom: 2.7rem; }
+  .modal__input {
+    margin-bottom: 3.328rem; }
+    .modal__input:last-of-type {
+      margin-bottom: -0.2rem; }
+    .modal__input:nth-of-type(2) {
+      margin-bottom: 3.3rem; }
+  .modal__button {
+    align-self: flex-end;
+    padding: 1.214rem 3.214rem;
+    border-radius: 0; }
+
 @media screen and (max-width: 1250px) {
   html {
     font-size: 12px; }
@@ -627,7 +714,7 @@ img {
       display: none; }
     .hero__content {
       margin: auto;
-      max-width: 350px; }
+      max-width: 25rem; }
     .hero__text {
       font-size: 18px;
       margin-bottom: 2.28rem; }

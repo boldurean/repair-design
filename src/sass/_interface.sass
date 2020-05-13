@@ -16,3 +16,38 @@
     background-color: transparent
     border: 1px solid $light
     color: $light
+
+.label
+  font-size: 1.071rem
+  &--light
+    color: rgba($light, 0.5)
+.input
+  font-size: 1.285714rem
+  color: $light
+  border: none
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3)
+  background: transparent
+  padding: 0.5rem 0
+  &::placeholder
+    color: $light
+
+.policy
+  &__checkbox
+    opacity: 0
+    visibility: hidden
+    &:checked + .policy__label
+      &:before
+        background: $primary url("../img/modal/checked.svg") no-repeat center / 10px
+  &__label
+    display: flex
+    font-size: 16px
+    align-items: center
+    &:before
+      content: ''
+      width: 18px
+      height: 18px
+      border: 1px solid $primary
+      border-radius: 1px
+      cursor: pointer
+      margin-right: 0.64rem
+
