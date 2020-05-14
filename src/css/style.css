@@ -603,8 +603,8 @@ img {
   line-height: 1.39;
   background-color: #E3B873;
   color: #ffffff;
-  padding-top: 1rem;
-  padding-left: 2.8rem; }
+  padding: 18px 10px;
+  text-align: center; }
 
 .card__image {
   min-width: 100%; }
@@ -634,7 +634,8 @@ img {
       height: 100%;
       background: rgba(19, 19, 19, 0.3); }
   .design__pricetag {
-    padding-left: 2.3rem; }
+    text-align: left;
+    padding: 13.3px 0 13px 33.3px; }
 
 .modal {
   position: fixed;
@@ -700,7 +701,10 @@ img {
   .nav__item {
     margin-right: 1rem; }
   .hero__content {
-    margin-left: 6rem; } }
+    margin-left: 6rem; }
+  .design__pricetag {
+    text-align: left;
+    padding: 17.8px 0 13px 33.3px; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -719,8 +723,22 @@ img {
       color: #ffffff; }
     .design__section-title {
       color: #ffffff; }
+    .design__card {
+      position: relative; }
+      .design__card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(19, 19, 19, 0); }
   .col {
-    margin-bottom: 5.79rem; } }
+    margin-bottom: 5.79rem; }
+  .card__pricetag {
+    min-width: 190.4px;
+    min-height: 40px;
+    padding: 0.8rem 2.4rem; } }
 
 @media screen and (max-width: 768px) {
   .row {

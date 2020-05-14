@@ -10,6 +10,10 @@
   .hero
     &__content
       margin-left: 6rem
+  .design
+    &__pricetag
+      text-align: left
+      padding: 17.8px 0 13px 33.3px
 
 @media screen and (max-width: 992px)
   .nav
@@ -29,8 +33,25 @@
       color: $light
     &__section-title
       color: $light
+    &__card
+      position: relative
+      &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba($dark, 0.0)
   .col
     margin-bottom: 5.79rem
+  .card
+    &__pricetag
+      min-width: 190.4px
+      min-height: 40px
+      padding: 0.8rem 2.4rem
+
+
 
 @media screen and (max-width: 768px)
   .row
@@ -46,7 +67,6 @@
 @media screen and (max-width: 576px)
   .container
     max-width: 90%
-
   .contacts
     &__phone
       font-size: 12px
@@ -134,6 +154,7 @@
       line-height: 1.36
       max-width: 303px
       margin-bottom: 2.9rem
+
 
 
 //HEIGHT
