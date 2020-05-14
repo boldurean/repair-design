@@ -19,6 +19,18 @@
       display: none
     &__content
       margin-left: 0
+  .row
+    flex-direction: column
+    align-items: center
+  .design
+    background: $dark
+    &__description
+      max-width: 35.21rem
+      color: $light
+    &__section-title
+      color: $light
+  .col
+    margin-bottom: 5.79rem
 
 @media screen and (max-width: 768px)
   .row
@@ -33,7 +45,7 @@
 
 @media screen and (max-width: 576px)
   .container
-    max-width: 80%
+    max-width: 90%
 
   .contacts
     &__phone
@@ -49,28 +61,30 @@
       display: none
     &__content
       margin: auto
-      max-width: 25rem
+      max-width: 90%
     &__text
       font-size: 18px
       margin-bottom: 2.28rem
     &__button
       display: block
+      min-width: 100%
       margin-bottom: 2.1rem
       &--outline
         font-size: 13px
+
   .title
     max-width: 30rem
     font-size: 23px
 
 @media screen and (max-width: 375px)
   .container
-    width: 95%
-    max-width: 338.6px
-    margin: auto
+    width: 90%
+    max-width: 375px
   .hero
-    padding-top: 57px
+    padding-top: 56px
     &__content
-      width: 100%
+      max-width: 100%
+      margin: 0
     &__text
       margin-bottom: 2.6rem
       max-width: 321px
@@ -105,16 +119,6 @@
     &__list
       font-size: 13px
       line-height: 1.7
-      &--full
-        max-height: 153px
-        overflow: hidden
-        white-space: nowrap
-        text-overflow: ellipsis
-    &__item
-      &--dots
-        &:after
-          content: "..."
-          color: $secondary
     &__pricetag
       font-size: 15px
       min-width: 190.4px
@@ -145,19 +149,16 @@
       transition: color 0.2s
       &:hover
         color: $primary
-
   .logo
     transition: 0.3s
     &:hover
       text-shadow: 0 5px 20px rgba($primary, 0.9)
       cursor: pointer
-
   .contacts
     &__phone
       transition: text-shadow 0.3s
       &:hover
         text-shadow: 0 5px 20px rgba($primary, 0.9)
-
   .button
     &--primary
       transition: box-shadow 0.3s

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     //получаем кнопки
     const modal = document.querySelector('.modal');
-    const modalBtn = document.querySelectorAll('[data-toggle=modal');
+    const modalBtn = document.querySelectorAll('[data-toggle=modal]');
     const closeBtn = document.querySelector('.modal__close');
 
 
@@ -12,13 +12,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
         modal.classList.toggle('modal--visible');
     }
 
-
-    //добавляем события:
+    //добавляем события
 
     //прослушка кнопок "открыть"
     modalBtn.forEach(element => {
        element.addEventListener('click', switchModal);
     });
+
     //прослушка кнопки "закрыть"
     closeBtn.addEventListener('click', switchModal);
 
@@ -34,5 +34,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
             modal.classList.remove('modal--visible');
         }
     })
-
 })
