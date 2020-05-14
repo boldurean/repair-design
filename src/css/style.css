@@ -370,6 +370,23 @@ template {
     cursor: pointer;
     margin-right: 0.64rem; }
 
+.scrollToTop {
+  position: fixed;
+  display: none;
+  bottom: 15px;
+  right: 15px;
+  font-weight: bold;
+  font-family: "Yeseva One", serif;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 5px;
+  background-color: #E3B873;
+  border: 2px solid #E3B873;
+  border-radius: 2px; }
+  .scrollToTop:hover {
+    text-decoration: none; }
+
 .container {
   width: 88%;
   max-width: 1240px;
