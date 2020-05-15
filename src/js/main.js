@@ -74,7 +74,7 @@ $(document).ready(function () {
     });
     //Клик событие, чтобы проскролить вниз
     $('.hero__scroll-down').click(function () {
-        $("html, body").animate({ scrollTop: ($(window).height()) -85}, 600);
+        $("html, body").animate({ scrollTop: ($(window).height()) - ($('header').height())}, 600);
         return false;
     })
 })
