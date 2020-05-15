@@ -13,13 +13,47 @@ img
 
 .section
   padding: 60px 0
+  &--dark
+    background-color: $dark
+    color: $light
   &-title
     text-align: center
-    text-transform: uppercase
-    font-family: 'Yeseva One', serif
+    &--left
+      text-align: left
     &__heading
+      text-transform: uppercase
+      font-family: $yoseva
       font-size: 1.428rem
       font-weight: normal
+      line-height: 138.6%
+      &--primary
+        color: $primary
+        font-size: 27px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.39
+        letter-spacing: -1.89px
+    &__word
+      display: flex
+      align-items: center
+      &:after
+        content: ''
+        width: 92.8px
+        height: 2px
+        background-color: $primary
+        margin-left: 2.3rem
+    &__text
+      font-size: 1.28rem
+      line-height: 2.10rem
+      max-width: 31.57rem
+      margin-bottom: 1.9rem
+      font-family: $futuraBook
+      font-weight: normal
+      font-stretch: normal
+      font-style: normal
+      letter-spacing: normal
+      color: $light
     &__image
       display: flex
       justify-content: center

@@ -26,6 +26,8 @@
   .row
     flex-direction: column
     align-items: center
+    &-projects
+      flex-direction: row
   .design
     background: $dark
     &__description
@@ -43,7 +45,6 @@
         width: 100%
         height: 100%
         background: rgba($dark, 0.0)
-
   .card
     &__pricetag
       min-width: 190.4px
@@ -51,19 +52,30 @@
       padding: 0.8rem 2.4rem
     &__text
       margin-bottom: 6.89rem
-
+  .swiper
+    &-slide
+      &__text
+        flex-basis: 47%
 
 
 @media screen and (max-width: 768px)
   .row
     flex-direction: column
     align-items: center
+    &-projects
+      text-align: left
+  .col-45
+    max-width: 100%
+  .col-55
+    max-width: 100%
   .types, .design
     &__card
       margin-bottom: 4.29rem
   .card
     &__text
       margin-left: 0
+
+
 
 @media screen and (max-width: 576px)
   .container
@@ -127,9 +139,51 @@
   .contacts
     &__phone
       font-size: 12px
-  .section-title
-    &__heading
-      font-size: 22px
+  .section
+    &-title
+      &__heading
+        font-size: 22px
+        &--primary
+          letter-spacing: -1.59px
+          margin-bottom: 2rem
+      &__word
+        &:after
+          display: none
+      &__text
+        max-width: 24.78rem
+        font-size: 14px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.68
+        letter-spacing: normal
+        margin-bottom: 1.7rem
+  .swiper
+    &-slide
+      &__text
+        margin-bottom: 0.9rem
+        &:last-of-type
+          margin-bottom: 3.9rem
+      img
+        padding-top: 2.7rem
+
+      &__heading
+        font-size: 14px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.39
+        letter-spacing: normal
+        margin-bottom: 0.74rem
+      &__value
+        font-size: 14px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.36
+        letter-spacing: normal
+
+
   .card
     &__text
       margin-top: -12.03rem
@@ -157,6 +211,7 @@
       line-height: 1.36
       max-width: 303px
       margin-bottom: 2.9rem
+.seciton
 
 
 //HEIGHT

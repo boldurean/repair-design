@@ -23,7 +23,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <title>Repair-design</title>
@@ -70,18 +70,99 @@
       <!-- /.hero -->
       <section class="section section--dark projects">
         <div class="container">
-          <div class="row">
-            <div class="col-50">
-              <div class="section-title">
-                <h2 class="section-title__heading">Завершенные проекты</h2>
+          <div class="row row-projects">
+            <div class="col-45">
+              <div class="section-title section-title--left">
+                <h2 class="section-title__heading section-title__heading--primary">Завершенные <span class="section-title__word">проекты</span></h2>
                 <!-- /.section-title__heading -->
                 <p class="section-title__text">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
               </div>
               <!-- /.section-title -->
+              <!-- Slider main container -->
+              <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper swiper-no-swiping">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading">Город:</h3>
+                      <span class="swiper-slide__value">Ростов-на-Дону ЖК Адмирал </span>
+                    </div>
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading swiper-slide__heading--right">Площадь:</h3>
+                      <span class="swiper-slide__value">81 м<sup>2</sup></span>
+                    </div>
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading">Срок ремонта:</h3>
+                      <span class="swiper-slide__value">3,5 месяца</span>
+                    </div>
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading swiper-slide__heading--right">Стоимость:</h3>
+                      <span class="swiper-slide__value">По запросу</span>
+                    </div>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading">Город:</h3>
+                      <span class="swiper-slide__value">Новосибирск</span>
+                    </div>
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading">Площадь:</h3>
+                      <span class="swiper-slide__value">85 м<sup>2</sup></span>
+                    </div>
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading">Срок ремонта:</h3>
+                      <span class="swiper-slide__value">6 месяцев</span>
+                    </div>
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading">Стоимость:</h3>
+                      <span class="swiper-slide__value">По смете</span>
+                    </div>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading">Город:</h3>
+                      <span class="swiper-slide__value">Кишинёв</span>
+                    </div>
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading">Площадь:</h3>
+                      <span class="swiper-slide__value">61 м<sup>2</sup></span>
+                    </div>
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading">Срок ремонта:</h3>
+                      <span class="swiper-slide__value">1,5 месяца</span>
+                    </div>
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading">Стоимость:</h3>
+                      <span class="swiper-slide__value">По запросу</span>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-next"></div>
+              </div>
             </div>
-            <!-- /.col-50 -->
-            <div class="col-50"></div>
-            <!-- /.col-50 -->
+            <!-- /.col-45 -->
+            <div class="col-55">
+              <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper swiper-no-swiping">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src="img/projects/projects-1.jpg" alt="project-photo"></div>
+                  <div class="swiper-slide"><img src="img/projects/projects-2.jpg" alt="project-photo"></div>
+                  <div class="swiper-slide"><img src="img/projects/projects-3.jpeg" alt="project-photo"></div>
+                </div>
+              </div>
+            </div>
+            <!-- /.col-55 -->
           </div>
           <!-- /.row -->
         </div>
@@ -301,6 +382,7 @@
     </div>
     <!-- /.modal -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
