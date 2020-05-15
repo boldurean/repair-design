@@ -488,6 +488,15 @@ img {
     width: 100%;
     height: 100%;
     background: rgba(19, 19, 19, 0.7); }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3.46rem;
+    background-color: #131313; }
   .hero__content {
     position: relative;
     margin-left: 4.28rem;
@@ -520,6 +529,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 3;
     left: 0;
     bottom: 0;
     min-width: 17.6rem;
