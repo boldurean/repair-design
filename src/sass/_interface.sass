@@ -55,16 +55,15 @@
 .scrollToTop
   position: fixed
   display: none
-  bottom: 15px
-  right: 15px
-  font-weight: bold
-  font-family: $yoseva
-  font-size: 0.85rem
-  text-decoration: none
-  color: $light
-  padding: 5px
-  background-color: $primary
+  bottom: 25px
+  right: 25px
+  width: 30px
+  height: 30px
+  background: $primary url("../img/arrow-up.svg") no-repeat center
   border: 2px solid $primary
-  border-radius: 2px
+  border-radius: 50%
+  transition: box-shadow 0.3s
   &:hover
+    background: transparent url("../img/arrow-up-primary.svg") no-repeat center
+    box-shadow: 0 5px 15px rgba($primary, 0.7)
     text-decoration: none

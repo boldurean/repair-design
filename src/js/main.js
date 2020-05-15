@@ -39,41 +39,41 @@
 $(document).ready(function () {
     const modal = $('.modal'),
         modalBtn = $('[data-toggle=modal]'),
-        closeBtn = $('.modal__close'),
-        modalDialog = $('.modal__dialog');
+        closeBtn = $('.modal__close');
 
 
-        modalBtn.on('click', function () {
-            modal.toggleClass('modal--visible');
-        })
-        closeBtn.on('click', function () {
-            modal.toggleClass('modal--visible');
-        })
-        $(document).keydown(function(event) {
-            if (event.keyCode === 27) {
-                $(modal).removeClass('modal--visible');
-            }
-        });
-        $(document).click(function (event) {
-            if ($(event.target).is(modal)) {
-                $(modal).removeClass('modal--visible');
-            }
-        });
-    $(document).ready(function(){
-        //Проверим если скролла нет, тогда не показываем кнопку
-        $(window).scroll(function(){
-            if ($(this).scrollTop() > 100) {
-                $('.scrollToTop').fadeIn();
-            } else {
-                $('.scrollToTop').fadeOut();
-            }
-        });
-
-        //Клик событие, чтобы проскролить вверх
-        $('.scrollToTop').click(function(){
-            $('html, body').animate({scrollTop : 0},800);
-            return false;
-        });
-
+    modalBtn.on('click', function () {
+        modal.toggleClass('modal--visible');
+    })
+    closeBtn.on('click', function () {
+        modal.toggleClass('modal--visible');
+    })
+    $(document).keydown(function(event) {
+        if (event.keyCode === 27) {
+            $(modal).removeClass('modal--visible');
+        }
     });
+    $(document).click(function (event) {
+        if ($(event.target).is(modal)) {
+            $(modal).removeClass('modal--visible');
+        }
+    });
+    //Проверим если скролла нет, тогда не показываем кнопку
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('.scrollToTop').fadeIn();
+        } else {
+            $('.scrollToTop').fadeOut();
+        }
+    });
+
+    //Клик событие, чтобы проскролить вверх
+    $('.scrollToTop').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+    $('.hero__scroll-down').click(function () {
+        $("html, body").animate({ scrollTop: $(window).height()-85}, 600);
+        return false;
+    })
 })
