@@ -79,7 +79,7 @@ $(document).ready(function () {
     })
 
     //initialize swiper when document ready
-    let mySwiper = new Swiper ('.swiper-container', {
+    const swiperOne = new Swiper ('.swiper-container', {
         // Optional parameters
         loop: true,
         pagination: {
@@ -90,12 +90,26 @@ $(document).ready(function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+
+
     })
 
     let next = $('.swiper-button-next');
     let prev = $('.swiper-button-prev');
     let bullets = $('.swiper-pagination');
 
-    next.css('left', prev.width() + 10 + bullets.width() + 35)
-    bullets.css('left', prev.width() + 10)
+
+    next.css('left', prev.width() + 10 + bullets.width() + 35);
+    bullets.css('left', prev.width() + 10);
+
+    const swiperTwo = new Swiper('.swiperTwo', {
+        pagination: {
+            el: '.swiper-pagination-top',
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: '.steps-button-next-2',
+            prevEl: '.steps-button-prev-2',
+        },
+    });
 });

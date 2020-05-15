@@ -638,7 +638,7 @@ img {
     flex-basis: 34%;
     margin-bottom: 0.92rem;
     padding-bottom: 0.5rem; }
-    .swiper-slide__text:last-of-type {
+    .swiper-slide__text:nth-child(4) {
       margin-bottom: 6.6rem; }
   .swiper-slide__heading {
     font-size: 1.285rem;
@@ -762,6 +762,46 @@ img {
   .design__pricetag {
     text-align: left;
     padding: 13.3px 0 13px 33.3px; }
+
+.steps__col {
+  max-width: 35%; }
+
+.steps__pagination--top {
+  font-family: "Yeseva One", serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.39;
+  letter-spacing: 0.5;
+  color: #ffffff; }
+
+.steps-slide__text {
+  flex-basis: 100%;
+  max-width: 100%; }
+
+.steps-slide__heading {
+  margin-top: 1.4rem;
+  max-width: 60%;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5; }
+
+.steps-slide__value {
+  max-width: 24.071rem;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  color: #ffffff; }
+  .steps-slide__value + .steps-slide__value {
+    margin-top: 0.8rem; }
+  .steps-slide__value--2 {
+    max-width: 21rem; }
 
 .modal {
   position: fixed;
