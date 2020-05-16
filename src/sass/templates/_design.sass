@@ -14,14 +14,22 @@
     color: #363636
   &__card
     position: relative
-    &::before
-      content: ""
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      background: rgba($dark, 0.3)
+  &-image
+    &__wrap
+      position: relative
+      img
+        display: block
+      &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background-color: rgba(19, 19, 19, 0.3)
+
+
+
   &__pricetag
     text-align: left
     padding: 13.3px 0 13px 33.3px

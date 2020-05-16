@@ -48,7 +48,7 @@ $(document).ready(function () {
     closeBtn.on('click', function () {
         modal.toggleClass('modal--visible');
     })
-    $(document).keydown(function(event) {
+    $(document).keydown(function (event) {
         if (event.keyCode === 27) {
             $(modal).removeClass('modal--visible');
         }
@@ -59,7 +59,7 @@ $(document).ready(function () {
         }
     });
     //Проверим если скролла нет, тогда не показываем кнопку
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.scrollToTop').fadeIn();
         } else {
@@ -68,18 +68,18 @@ $(document).ready(function () {
     });
 
     //Клик событие, чтобы проскролить вверх
-    $('.scrollToTop').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
+    $('.scrollToTop').click(function () {
+        $('html, body').animate({scrollTop: 0}, 800);
         return false;
     });
     //Клик событие, чтобы проскролить вниз
     $('.hero__scroll-down').click(function () {
-        $("html, body").animate({ scrollTop: ($(window).height()) - ($('header').outerHeight())}, 600);
+        $("html, body").animate({scrollTop: ($(window).height()) - ($('header').outerHeight())}, 600);
         return false;
     })
 
     //initialize swiper when document ready
-    const swiperOne = new Swiper ('.swiper-container', {
+    const swiperOne = new Swiper('.swiper-container', {
         // Optional parameters
         loop: true,
         pagination: {
@@ -102,14 +102,5 @@ $(document).ready(function () {
     next.css('left', prev.width() + 10 + bullets.width() + 35);
     bullets.css('left', prev.width() + 10);
 
-    const swiperTwo = new Swiper('.swiperTwo', {
-        pagination: {
-            el: '.swiper-pagination-top',
-            type: 'fraction',
-        },
-        navigation: {
-            nextEl: '.steps-button-next-2',
-            prevEl: '.steps-button-prev-2',
-        },
-    });
-});
+
+})

@@ -399,11 +399,20 @@ template {
 .col-30 {
   flex-basis: 30%; }
 
+.col-35 {
+  flex-basis: 35%;
+  text-align: left;
+  overflow: hidden; }
+
 .col-45 {
   max-width: 45%; }
 
 .col-55 {
   max-width: 55%; }
+
+.col-65 {
+  flex-basis: 65%;
+  overflow: hidden; }
 
 *, *::before, *::after {
   box-sizing: border-box; }
@@ -751,20 +760,25 @@ img {
     color: #363636; }
   .design__card {
     position: relative; }
-    .design__card::before {
-      content: "";
+  .design-image__wrap {
+    position: relative; }
+    .design-image__wrap img {
+      display: block; }
+    .design-image__wrap::before {
+      content: '';
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(19, 19, 19, 0.3); }
+      top: 0;
+      left: 0;
+      background-color: rgba(19, 19, 19, 0.3); }
   .design__pricetag {
     text-align: left;
     padding: 13.3px 0 13px 33.3px; }
 
-.steps__col {
-  max-width: 35%; }
+.steps__swiper--1 {
+  width: 24.071rem;
+  margin-left: 0; }
 
 .steps__pagination--top {
   font-family: "Yeseva One", serif;
@@ -773,8 +787,46 @@ img {
   font-stretch: normal;
   font-style: normal;
   line-height: 1.39;
-  letter-spacing: 0.5;
+  letter-spacing: 0.5px;
   color: #ffffff; }
+
+.steps__button-next {
+  bottom: 0;
+  top: auto;
+  background-size: 42px;
+  width: 42px;
+  height: 14px; }
+  .steps__button-next:after {
+    display: none; }
+
+.steps__row {
+  display: flex;
+  justify-content: space-between; }
+
+.steps-number {
+  font-size: 15px;
+  font-family: "Yeseva One", serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.39;
+  letter-spacing: normal;
+  color: #ffffff; }
+  .steps-number:after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 2px;
+    background-color: #E3B873; }
+  .steps-number__text {
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff; }
+  .steps-number__wrap {
+    max-width: 9.07rem; }
 
 .steps-slide__text {
   flex-basis: 100%;
