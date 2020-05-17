@@ -645,13 +645,12 @@ img {
 .projects__swiper-wrapper--image {
   padding-top: 1.8rem; }
   .projects__swiper-wrapper--image img {
-    object-fit: cover;
-    width: 100%;
-    height: auto; }
+    object-fit: cover; }
 
 .projects__swiper-slide {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  height: auto; }
   .projects__swiper-slide__text {
     flex-basis: 34%;
     margin-bottom: 0.92rem;
@@ -995,6 +994,8 @@ img {
     margin-bottom: 6.89rem; }
   .swiper-slide__text {
     flex-basis: 47%; }
+  .projects__swiper-wrapper--image {
+    max-height: 17.8rem; }
   .section-title__text--smaller {
     max-width: 90%; } }
 
@@ -1029,6 +1030,8 @@ img {
     display: none; }
   .hero {
     padding-top: 60px; }
+    .hero::after {
+      display: none; }
     .hero__scroll-down {
       display: none; }
     .hero__content {
