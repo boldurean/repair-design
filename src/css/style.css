@@ -88,6 +88,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: dotted;
   text-decoration: dotted;
   /* 2 */ }
 
@@ -348,6 +349,14 @@ template {
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   background: transparent;
   padding: 0.5rem 0; }
+  .input::-webkit-input-placeholder {
+    color: #ffffff; }
+  .input::-moz-placeholder {
+    color: #ffffff; }
+  .input:-ms-input-placeholder {
+    color: #ffffff; }
+  .input::-ms-input-placeholder {
+    color: #ffffff; }
   .input::placeholder {
     color: #ffffff; }
 
@@ -412,11 +421,11 @@ template {
   max-width: 55%; }
 
 .col-65 {
-  flex-basis: 65%;
-  overflow: hidden; }
+  flex-basis: 65%; }
 
 *, *::before, *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline-color: #E3B873; }
 
 html {
   font-size: 14px; }
@@ -645,6 +654,7 @@ img {
 .projects__swiper-wrapper--image {
   padding-top: 1.8rem; }
   .projects__swiper-wrapper--image img {
+    -o-object-fit: cover;
     object-fit: cover; }
 
 .projects__swiper-slide {
@@ -803,13 +813,20 @@ img {
   text-transform: uppercase; }
 
 .steps {
+  padding-top: 0;
   overflow: hidden; }
   .steps__row {
     display: flex;
     justify-content: space-between; }
+  .steps__swiper-container-pictures {
+    margin-top: 3.642rem;
+    max-height: 26.9rem; }
+    .steps__swiper-container-pictures img {
+      -o-object-fit: cover;
+      object-fit: cover; }
   .steps__swiper-pagination--fraction {
     position: static;
-    width: 40px;
+    width: 25px;
     height: 21px;
     font-family: "Yeseva One", serif;
     font-size: 18px;
@@ -817,9 +834,11 @@ img {
     font-stretch: normal;
     font-style: normal;
     line-height: 1.39;
-    letter-spacing: normal;
+    letter-spacing: -2.8px;
     color: #ffffff; }
   .steps__swiper-slide--header {
+    margin-top: 1.6rem;
+    margin-bottom: 0.8rem;
     text-transform: uppercase;
     max-width: 18.71rem;
     font-family: "Yeseva One", serif;
@@ -831,15 +850,20 @@ img {
     letter-spacing: normal;
     color: #E3B873; }
   .steps__swiper-slide--text {
-    max-width: 21.27rem;
+    max-width: 24.17rem;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
     font-family: "Futura Book", sans-serif;
     font-size: 15px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: normal;
+    line-height: 1.8rem;
     letter-spacing: normal;
     color: #ffffff; }
+    .steps__swiper-slide--text:last-child {
+      margin-bottom: 6.2rem;
+      max-width: 21.07rem; }
   .steps__swiper-button-prev, .steps__swiper-button-next {
     bottom: 0;
     top: auto;
@@ -855,15 +879,26 @@ img {
     background: url("../img/arrow-next.svg") no-repeat center;
     left: 150px; }
 
+.steps__heading {
+  margin-top: 1.1rem;
+  letter-spacing: 0.11px;
+  margin-bottom: 6rem; }
+  .steps__heading--word:after {
+    margin-left: 6rem; }
+
 .steps-buttons {
+  margin-bottom: 1.1rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between; }
   .steps-buttons .not-active {
     color: rgba(255, 255, 255, 0.3); }
   .steps-buttons--wrap {
-    max-width: 127px; }
+    min-width: 134.3px;
+    min-height: 6.535rem;
+    width: 9.581rem; }
   .steps-buttons--header {
+    margin-bottom: 1.1rem;
     width: 19px;
     height: 15px;
     font-family: "Yeseva One", serif;
@@ -873,9 +908,14 @@ img {
     font-style: normal;
     line-height: 1.39;
     letter-spacing: normal; }
+    .steps-buttons--header:after {
+      content: '';
+      margin-left: 1px;
+      display: block;
+      height: 2px;
+      width: 17px;
+      background-color: #E3B873; }
   .steps-buttons--text {
-    width: 127px;
-    height: 39px;
     font-family: "Futura Book", sans-serif;
     font-size: 15px;
     font-weight: normal;
@@ -883,6 +923,11 @@ img {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal; }
+
+.steps-col--65 {
+  padding-top: 4.5rem;
+  padding-left: 2.85rem;
+  overflow: hidden; }
 
 .modal {
   position: fixed;
@@ -995,7 +1040,9 @@ img {
   .swiper-slide__text {
     flex-basis: 47%; }
   .section-title__text--smaller {
-    max-width: 90%; } }
+    max-width: 90%; }
+  .steps {
+    display: none; } }
 
 @media screen and (max-width: 768px) {
   .row {
@@ -1144,6 +1191,8 @@ img {
 
 @media screen and (max-height: 615px) {
   .hero__scroll-down {
+    display: none; }
+  .hero:after {
     display: none; } }
 
 @media screen and (min-width: 992px) {

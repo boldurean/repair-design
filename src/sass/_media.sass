@@ -69,6 +69,8 @@
       &__text
         &--smaller
           max-width: 90%
+  .steps
+    display: none
 
 @media screen and (max-width: 768px)
   .row
@@ -241,13 +243,14 @@
       line-height: 1.36
       max-width: 303px
       margin-bottom: 2.9rem
-.seciton
 
 
 //HEIGHT
 @media screen and (max-height: 615px)
   .hero
     &__scroll-down
+      display: none
+    &:after
       display: none
 
 //HOVER EFFECTS APPEAR

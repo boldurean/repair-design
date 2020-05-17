@@ -10,15 +10,22 @@
   text-transform: uppercase
 
 .steps
+  padding-top: 0
   overflow: hidden
   &__row
     display: flex
     justify-content: space-between
   &__swiper
+    &-container
+      &-pictures
+        margin-top: 3.642rem
+        max-height: 26.9rem
+        img
+          object-fit: cover
     &-pagination
       &--fraction
         position: static
-        width: 40px
+        width: 25px
         height: 21px
         font-family: $yoseva
         font-size: 18px
@@ -26,10 +33,12 @@
         font-stretch: normal
         font-style: normal
         line-height: 1.39
-        letter-spacing: normal
+        letter-spacing: -2.8px
         color: #ffffff
     &-slide
       &--header
+        margin-top: 1.6rem
+        margin-bottom: 0.8rem
         text-transform: uppercase
         max-width: 18.71rem
         font-family: $yoseva
@@ -41,15 +50,20 @@
         letter-spacing: normal
         color: $primary
       &--text
-        max-width: 21.27rem
+        max-width: 24.17rem
+        margin-top: 0.8rem
+        margin-bottom: 1rem
         font-family: $futuraBook
         font-size: 15px
         font-weight: normal
         font-stretch: normal
         font-style: normal
-        line-height: normal
+        line-height: 1.8rem
         letter-spacing: normal
         color: #ffffff
+        &:last-child
+          margin-bottom: 6.2rem
+          max-width: 21.07rem
     &-button
       &-prev, &-next
         bottom: 0
@@ -66,15 +80,26 @@
         background: url("../img/arrow-next.svg") no-repeat center
         left: 150px
 .steps
+  &__heading
+    margin-top: 1.1rem
+    letter-spacing: 0.11px
+    margin-bottom: 6rem
+    &--word
+      &:after
+        margin-left: 6rem
   &-buttons
+    margin-bottom: 1.1rem
     cursor: pointer
     .not-active
       color: rgba($light, 0.3)
     display: flex
     justify-content: space-between
     &--wrap
-      max-width: 127px
+      min-width: 134.3px
+      min-height: 6.535rem
+      width: 9.581rem
     &--header
+      margin-bottom: 1.1rem
       width: 19px
       height: 15px
       font-family: $yoseva
@@ -84,9 +109,14 @@
       font-style: normal
       line-height: 1.39
       letter-spacing: normal
+      &:after
+        content: ''
+        margin-left: 1px
+        display: block
+        height: 2px
+        width: 17px
+        background-color: $primary
     &--text
-      width: 127px
-      height: 39px
       font-family: $futuraBook
       font-size: 15px
       font-weight: normal
@@ -94,6 +124,12 @@
       font-style: normal
       line-height: normal
       letter-spacing: normal
+
+  &-col
+    &--65
+      padding-top: 4.5rem
+      padding-left: 2.85rem
+      overflow: hidden
 
 
 
