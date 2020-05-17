@@ -10,6 +10,7 @@
   text-transform: uppercase
 
 .steps
+  overflow: hidden
   &__row
     display: flex
     justify-content: space-between
@@ -64,8 +65,8 @@
       &-next
         background: url("../img/arrow-next.svg") no-repeat center
         left: 150px
-.row
-  &__buttons
+.steps
+  &-buttons
     cursor: pointer
     .not-active
       color: rgba($light, 0.3)

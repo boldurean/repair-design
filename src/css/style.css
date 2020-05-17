@@ -380,7 +380,8 @@ template {
   background: #E3B873 url("../img/arrow-up.svg") no-repeat center;
   border: 2px solid #E3B873;
   border-radius: 50%;
-  transition: box-shadow 0.3s; }
+  transition: box-shadow 0.3s;
+  z-index: 10; }
   .scrollToTop:hover {
     background: transparent url("../img/arrow-up-primary.svg") no-repeat center;
     box-shadow: 0 5px 15px rgba(227, 184, 115, 0.7);
@@ -397,7 +398,7 @@ template {
   justify-content: space-between; }
 
 .col-30 {
-  flex-basis: 30%; }
+  flex-basis: 31.7%; }
 
 .col-35 {
   flex-basis: 35%;
@@ -765,11 +766,11 @@ img {
     color: #363636; }
   .design__card {
     position: relative; }
-  .design-image__wrap {
+  .design-image-wrap {
     position: relative; }
-    .design-image__wrap img {
+    .design-image-wrap img {
       display: block; }
-    .design-image__wrap::before {
+    .design-image-wrap::before {
       content: '';
       position: absolute;
       width: 100%;
@@ -792,72 +793,68 @@ img {
   letter-spacing: normal;
   text-transform: uppercase; }
 
-.steps__row {
-  display: flex;
-  justify-content: space-between; }
+.steps {
+  overflow: hidden; }
+  .steps__row {
+    display: flex;
+    justify-content: space-between; }
+  .steps__swiper-pagination--fraction {
+    position: static;
+    width: 40px;
+    height: 21px;
+    font-family: "Yeseva One", serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.39;
+    letter-spacing: normal;
+    color: #ffffff; }
+  .steps__swiper-slide--header {
+    text-transform: uppercase;
+    max-width: 18.71rem;
+    font-family: "Yeseva One", serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #E3B873; }
+  .steps__swiper-slide--text {
+    max-width: 21.27rem;
+    font-family: "Futura Book", sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff; }
+  .steps__swiper-button-prev, .steps__swiper-button-next {
+    bottom: 0;
+    top: auto;
+    background-size: 42px;
+    width: 42px;
+    height: 14px; }
+    .steps__swiper-button-prev:after, .steps__swiper-button-next:after {
+      display: none; }
+  .steps__swiper-button-prev {
+    left: 0;
+    background: url("../img/arrow-prev.svg") no-repeat center; }
+  .steps__swiper-button-next {
+    background: url("../img/arrow-next.svg") no-repeat center;
+    left: 150px; }
 
-.steps__swiper-pagination--fraction {
-  position: static;
-  width: 40px;
-  height: 21px;
-  font-family: "Yeseva One", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.39;
-  letter-spacing: normal;
-  color: #ffffff; }
-
-.steps__swiper-slide--header {
-  text-transform: uppercase;
-  max-width: 18.71rem;
-  font-family: "Yeseva One", serif;
-  font-size: 15px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
-  color: #E3B873; }
-
-.steps__swiper-slide--text {
-  max-width: 21.27rem;
-  font-family: "Futura Book", sans-serif;
-  font-size: 15px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff; }
-
-.steps__swiper-button-prev, .steps__swiper-button-next {
-  bottom: 0;
-  top: auto;
-  background-size: 42px;
-  width: 42px;
-  height: 14px; }
-  .steps__swiper-button-prev:after, .steps__swiper-button-next:after {
-    display: none; }
-
-.steps__swiper-button-prev {
-  left: 0;
-  background: url("../img/arrow-prev.svg") no-repeat center; }
-
-.steps__swiper-button-next {
-  background: url("../img/arrow-next.svg") no-repeat center;
-  left: 150px; }
-
-.row__buttons {
+.steps-buttons {
   cursor: pointer;
   display: flex;
   justify-content: space-between; }
-  .row__buttons .not-active {
+  .steps-buttons .not-active {
     color: rgba(255, 255, 255, 0.3); }
-  .row__buttons--wrap {
+  .steps-buttons--wrap {
     max-width: 127px; }
-  .row__buttons--header {
+  .steps-buttons--header {
     width: 19px;
     height: 15px;
     font-family: "Yeseva One", serif;
@@ -867,7 +864,7 @@ img {
     font-style: normal;
     line-height: 1.39;
     letter-spacing: normal; }
-  .row__buttons--text {
+  .steps-buttons--text {
     width: 127px;
     height: 39px;
     font-family: "Futura Book", sans-serif;
