@@ -1,17 +1,24 @@
 .projects
   &__swiper
+    &-container--image
+      max-height: 34.428rem
+      max-width: 47.857rem
+    &-wrapper--image
+      padding-top: 1.8rem
+      img
+        object-fit: cover
+        width: 100%
+        height: auto
     &-slide
       display: flex
       flex-wrap: wrap
-      img
-        padding-top: 1.8rem
-        max-height: 34.428rem
       &__text
         flex-basis: 34%
         margin-bottom: 0.92rem
         padding-bottom: 0.5rem
+        min-height: 6.71rem
         &:nth-child(4)
-          margin-bottom: 6.6rem
+          margin-bottom: 5.3rem
       &__heading
         font-size: 1.285rem
         line-height: 1.78rem
@@ -60,6 +67,7 @@
 
 .swiper-pagination-bullet
   background-color: rgba($light, 0.3)
+  opacity: 1
   &-active
     background-color: $light
 

@@ -15,6 +15,14 @@
       text-align: left
       padding: 17.8px 0 13px 33.3px
 
+@media screen and (max-width: 1100px)
+  .projects
+    &__swiper
+      &-slide
+        &__text
+          flex-basis: 47.8%
+
+
 @media screen and (max-width: 992px)
   .nav
     display: none
@@ -56,7 +64,11 @@
     &-slide
       &__text
         flex-basis: 47%
-
+  .section
+    &-title
+      &__text
+        &--smaller
+          max-width: 90%
 
 @media screen and (max-width: 768px)
   .row
@@ -74,6 +86,15 @@
   .card
     &__text
       margin-left: 0
+  .swiper
+    &-slide
+      &__text
+        flex-basis: 30%
+  .section
+    &-title
+      &__text
+        &--smaller
+          max-width: 60%
 
 
 
@@ -110,6 +131,11 @@
   .scrollToTop
     opacity: 0
     visibility: hidden
+  .section
+    &-title
+      &__text
+        &--smaller
+          max-width: 80%
 
 
 @media screen and (max-width: 375px)
@@ -159,30 +185,31 @@
         line-height: 1.68
         letter-spacing: normal
         margin-bottom: 1.7rem
-  .swiper
-    &-slide
-      &__text
-        margin-bottom: 0.9rem
-        &:last-of-type
-          margin-bottom: 3.9rem
-      img
-        padding-top: 2.7rem
+  .projects
+    &__swiper
+      &-slide
+        &__text
+          margin-bottom: 0.9rem
+          &:last-of-type
+            margin-bottom: 2.7rem
+        img
+          padding-top: 1rem
 
-      &__heading
-        font-size: 14px
-        font-weight: normal
-        font-stretch: normal
-        font-style: normal
-        line-height: 1.39
-        letter-spacing: normal
-        margin-bottom: 0.74rem
-      &__value
-        font-size: 14px
-        font-weight: normal
-        font-stretch: normal
-        font-style: normal
-        line-height: 1.36
-        letter-spacing: normal
+        &__heading
+          font-size: 14px
+          font-weight: normal
+          font-stretch: normal
+          font-style: normal
+          line-height: 1.39
+          letter-spacing: normal
+          margin-bottom: 0.74rem
+        &__value
+          font-size: 14px
+          font-weight: normal
+          font-stretch: normal
+          font-style: normal
+          line-height: 1.36
+          letter-spacing: normal
 
 
   .card
