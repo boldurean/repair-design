@@ -1,52 +1,53 @@
-.swiper
-  &-slide
-    display: flex
-    flex-wrap: wrap
-    img
-      padding-top: 1.8rem
-      max-height: 34.428rem
-    &__text
-      flex-basis: 34%
-      margin-bottom: 0.92rem
-      padding-bottom: 0.5rem
-      &:nth-child(4)
-        margin-bottom: 6.6rem
-    &__heading
-      font-size: 1.285rem
-      line-height: 1.78rem
-      font-family: $yoseva
-      color: $primary
-      text-transform: uppercase
-      margin-bottom: 0.64rem
-      font-weight: normal
-      font-stretch: normal
-      font-style: normal
-      letter-spacing: normal
-    &__value
-      display: block
-      letter-spacing: 0.4px
-      line-height: 1.3rem
-      max-width: 7.8rem
-  &-pagination
-    &-bullet
-      background-color: rgba($light, 0.3)
-      &-active
-        background-color: $light
-  &-button
-    &-prev, &-next
-      bottom: 0
-      top: auto
-      background-size: 42px
-      width: 42px
-      height: 14px
-      &:after
-        display: none
-    &-prev
-      left: 0
-      background: url("../img/arrow-prev.svg") no-repeat center
-    &-next
-      background: url("../img/arrow-next.svg") no-repeat center
-      left: 150px
+.projects
+  &__swiper
+    &-slide
+      display: flex
+      flex-wrap: wrap
+      img
+        padding-top: 1.8rem
+        max-height: 34.428rem
+      &__text
+        flex-basis: 34%
+        margin-bottom: 0.92rem
+        padding-bottom: 0.5rem
+        &:nth-child(4)
+          margin-bottom: 6.6rem
+      &__heading
+        font-size: 1.285rem
+        line-height: 1.78rem
+        font-family: $yoseva
+        color: $primary
+        text-transform: uppercase
+        margin-bottom: 0.64rem
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        letter-spacing: normal
+      &__value
+        display: block
+        letter-spacing: 0.4px
+        line-height: 1.3rem
+        max-width: 7.8rem
+    &-pagination
+      &-bullet
+        background-color: rgba($light, 0.3)
+        &-active
+          background-color: $light
+    &-button
+      &-prev, &-next
+        bottom: 0
+        top: auto
+        background-size: 42px
+        width: 42px
+        height: 14px
+        &:after
+          display: none
+      &-prev
+        left: 0
+        background: url("../img/arrow-prev.svg") no-repeat center
+      &-next
+        background: url("../img/arrow-next.svg") no-repeat center
+        left: 150px
 
 .swiper-container-horizontal>.swiper-pagination-bullets
   margin: 0 0.928rem
@@ -56,3 +57,12 @@
 
 .swiper-container-horizontal > .swiper-pagination-bullets > .swiper-pagination-bullet
   margin: 0 0.6rem
+
+.swiper-pagination-bullet
+  background-color: rgba($light, 0.3)
+  &-active
+    background-color: $light
+
+
+
+

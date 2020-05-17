@@ -1,80 +1,99 @@
+.how-do-we-work
+  height: 16px
+  font-family: $futuraDemi
+  font-size: 15px
+  font-weight: normal
+  font-stretch: normal
+  font-style: normal
+  line-height: normal
+  letter-spacing: normal
+  text-transform: uppercase
+
 .steps
-  &__swiper--1
-    width: 24.071rem
-    margin-left: 0
-  &__pagination--top
-    font-family: $yoseva
-    font-size: 16px
-    font-weight: normal
-    font-stretch: normal
-    font-style: normal
-    line-height: 1.39
-    letter-spacing: 0.5px
-    color: $light
-  &__button-next
-    bottom: 0
-    top: auto
-    background-size: 42px
-    width: 42px
-    height: 14px
-    &:after
-      display: none
   &__row
     display: flex
     justify-content: space-between
-  &-number
-    font-size: 15px
-    font-family: $yoseva
-    font-weight: normal
-    font-style: normal
-    line-height: 1.39
-    letter-spacing: normal
-    color: #ffffff
-    &:after
-      content: ''
-      display: block
-      width: 16px
-      height: 2px
-      background-color: $primary
-    &__text
+  &__swiper
+    &-pagination
+      &--fraction
+        position: static
+        width: 40px
+        height: 21px
+        font-family: $yoseva
+        font-size: 18px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.39
+        letter-spacing: normal
+        color: #ffffff
+    &-slide
+      &--header
+        text-transform: uppercase
+        max-width: 18.71rem
+        font-family: $yoseva
+        font-size: 15px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.5
+        letter-spacing: normal
+        color: $primary
+      &--text
+        max-width: 21.27rem
+        font-family: $futuraBook
+        font-size: 15px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: normal
+        letter-spacing: normal
+        color: #ffffff
+    &-button
+      &-prev, &-next
+        bottom: 0
+        top: auto
+        background-size: 42px
+        width: 42px
+        height: 14px
+        &:after
+          display: none
+      &-prev
+        left: 0
+        background: url("../img/arrow-prev.svg") no-repeat center
+      &-next
+        background: url("../img/arrow-next.svg") no-repeat center
+        left: 150px
+.row
+  &__buttons
+    cursor: pointer
+    .not-active
+      color: rgba($light, 0.3)
+    display: flex
+    justify-content: space-between
+    &--wrap
+      max-width: 127px
+    &--header
+      width: 19px
+      height: 15px
+      font-family: $yoseva
+      font-size: 15px
+      font-weight: normal
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.39
+      letter-spacing: normal
+    &--text
+      width: 127px
+      height: 39px
+      font-family: $futuraBook
       font-size: 15px
       font-weight: normal
       font-stretch: normal
       font-style: normal
       line-height: normal
       letter-spacing: normal
-      color: #ffffff
-    &__wrap
-      max-width: 9.07rem
 
 
-
-
-
-  &-slide
-    &__text
-      flex-basis: 100%
-      max-width: 100%
-    &__heading
-      margin-top: 1.4rem
-      max-width: 60%
-      font-size: 15px
-      font-weight: normal
-      font-stretch: normal
-      font-style: normal
-      line-height: 1.5
-    &__value
-      max-width: 24.071rem
-      font-size: 15px
-      font-weight: normal
-      font-stretch: normal
-      font-style: normal
-      line-height: 1.7
-      letter-spacing: normal
-      color: #ffffff
-      & + &
-        margin-top: 0.8rem
-      &--2
-        max-width: 21rem
 
 
