@@ -3,7 +3,7 @@ const browserSync = require('browser-sync').create();
 const cleanCSS = require('gulp-clean-css');
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
-const autoprefixer = require('gulp-autoprefixer');
+// const autoprefixer = require('gulp-autoprefixer');
 
 function minify() {
   return src('src/css/*.css')
@@ -15,9 +15,9 @@ function minify() {
 function style() {
   return src('./src/sass/**/*.sass', './src/sass/**/*.scss')
       .pipe(sass())
-      .pipe(autoprefixer({
-        cascade: false
-      }))
+      // .pipe(autoprefixer({
+      //   cascade: false
+      // }))
       .pipe(dest('./src/css'))
       .pipe(browserSync.stream())
 }

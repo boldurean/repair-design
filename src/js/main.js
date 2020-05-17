@@ -129,8 +129,8 @@ $(document).ready(function () {
 
     //добавляем и убираем нужный класс чтобы покрасить активный слайд в белый.
     swiperStepsTwo.on('slideChange', function () {
-        var activeSlide = ('.button-' + swiperStepsTwo.realIndex);
-        var prevSlide = ('.button-' + swiperStepsTwo.previousIndex);
+        let activeSlide = ('.button-' + swiperStepsTwo.realIndex);
+        let prevSlide = ('.button-' + swiperStepsTwo.previousIndex);
         $(activeSlide).removeClass('not-active');
         $(prevSlide).addClass('not-active');
     });

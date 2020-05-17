@@ -661,6 +661,9 @@ img {
   display: flex;
   flex-wrap: wrap;
   height: auto; }
+  .projects__swiper-slide img {
+    width: 100%;
+    height: 100%; }
   .projects__swiper-slide__text {
     flex-basis: 34%;
     margin-bottom: 0.92rem;
