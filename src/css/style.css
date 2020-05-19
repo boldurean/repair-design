@@ -88,7 +88,6 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: dotted;
   text-decoration: dotted;
   /* 2 */ }
 
@@ -349,15 +348,7 @@ template {
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   background: transparent;
   padding: 0.5rem 0; }
-  .input::-webkit-input-placeholder {
-    color: #ffffff; }
-  .input::-moz-placeholder {
-    color: #ffffff; }
-  .input:-ms-input-placeholder {
-    color: #ffffff; }
-  .input::-ms-input-placeholder {
-    color: #ffffff; }
-  .input::placeholder {
+  .input--light::placeholder {
     color: #ffffff; }
 
 .policy__checkbox {
@@ -446,6 +437,8 @@ img {
     text-align: center; }
     .section-title--left {
       text-align: left; }
+    .section-title--light {
+      color: #ffffff; }
     .section-title__heading {
       text-transform: uppercase;
       font-family: "Yeseva One", serif;
@@ -647,68 +640,63 @@ img {
   .title--primary {
     color: #E3B873; }
 
-.projects__swiper-container--image {
-  max-height: 34.428rem;
-  max-width: 47.857rem; }
-
-.projects__swiper-wrapper--image {
-  padding-top: 1.8rem; }
-  .projects__swiper-wrapper--image img {
-    -o-object-fit: cover;
-    object-fit: cover; }
-
-.projects__swiper-slide {
-  display: flex;
-  flex-wrap: wrap;
-  height: auto; }
-  .projects__swiper-slide img {
-    width: 100%;
-    height: 100%; }
-  .projects__swiper-slide__text {
-    flex-basis: 34%;
-    margin-bottom: 0.92rem;
-    padding-bottom: 0.5rem;
-    min-height: 6.71rem; }
-    .projects__swiper-slide__text:nth-child(4) {
-      margin-bottom: 5.3rem; }
-  .projects__swiper-slide__heading {
-    font-size: 1.285rem;
-    line-height: 1.78rem;
-    font-family: "Yeseva One", serif;
-    color: #E3B873;
-    text-transform: uppercase;
-    margin-bottom: 0.64rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: normal; }
-  .projects__swiper-slide__value {
-    display: block;
-    letter-spacing: 0.4px;
-    line-height: 1.3rem;
-    max-width: 7.8rem; }
-
-.projects__swiper-pagination-bullet {
-  background-color: rgba(255, 255, 255, 0.3); }
-  .projects__swiper-pagination-bullet-active {
-    background-color: #ffffff; }
-
-.projects__swiper-button-prev, .projects__swiper-button-next {
-  bottom: 0;
-  top: auto;
-  background-size: 42px;
-  width: 42px;
-  height: 14px; }
-  .projects__swiper-button-prev:after, .projects__swiper-button-next:after {
-    display: none; }
-
-.projects__swiper-button-prev {
-  left: 0;
-  background: url("../img/arrow-prev.svg") no-repeat center; }
-
-.projects__swiper-button-next {
-  background: url("../img/arrow-next.svg") no-repeat center;
-  left: 150px; }
+.projects {
+  padding-bottom: 30rem; }
+  .projects__swiper-container--image {
+    max-height: 34.428rem;
+    max-width: 47.857rem; }
+  .projects__swiper-wrapper--image {
+    padding-top: 1.8rem; }
+    .projects__swiper-wrapper--image img {
+      object-fit: cover; }
+  .projects__swiper-slide {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto; }
+    .projects__swiper-slide img {
+      width: 100%;
+      height: 100%; }
+    .projects__swiper-slide__text {
+      flex-basis: 34%;
+      margin-bottom: 0.92rem;
+      padding-bottom: 0.5rem;
+      min-height: 6.71rem; }
+      .projects__swiper-slide__text:nth-child(4) {
+        margin-bottom: 5.3rem; }
+    .projects__swiper-slide__heading {
+      font-size: 1.285rem;
+      line-height: 1.78rem;
+      font-family: "Yeseva One", serif;
+      color: #E3B873;
+      text-transform: uppercase;
+      margin-bottom: 0.64rem;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal; }
+    .projects__swiper-slide__value {
+      display: block;
+      letter-spacing: 0.4px;
+      line-height: 1.3rem;
+      max-width: 7.8rem; }
+  .projects__swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.3); }
+    .projects__swiper-pagination-bullet-active {
+      background-color: #ffffff; }
+  .projects__swiper-button-prev, .projects__swiper-button-next {
+    bottom: 0;
+    top: auto;
+    background-size: 42px;
+    width: 42px;
+    height: 14px; }
+    .projects__swiper-button-prev:after, .projects__swiper-button-next:after {
+      display: none; }
+  .projects__swiper-button-prev {
+    left: 0;
+    background: url("../img/arrow-prev.svg") no-repeat center; }
+  .projects__swiper-button-next {
+    background: url("../img/arrow-next.svg") no-repeat center;
+    left: 150px; }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
   margin: 0 0.928rem;
@@ -724,6 +712,67 @@ img {
   opacity: 1; }
   .swiper-pagination-bullet-active {
     background-color: #ffffff; }
+
+.control__section-title {
+  margin-bottom: 2.214rem;
+  margin-top: -30rem; }
+
+.control__video {
+  position: relative;
+  display: flex;
+  margin: auto auto 4.428rem;
+  max-width: 58.357rem;
+  min-height: 31rem;
+  background: #131313 url("../img/control/video-mask.jpg") no-repeat center;
+  box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.15); }
+  .control__video::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); }
+
+.control__text {
+  max-width: 40.785rem;
+  margin: auto auto 4.285rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 2.4rem; }
+  .control__text:before {
+    display: block;
+    content: '';
+    margin: auto auto 2.5rem;
+    width: 55px;
+    height: 2px;
+    background-color: #E3B873; }
+
+.control__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 55rem;
+  margin: auto; }
+
+.control__policy {
+  flex-basis: 100%;
+  margin-top: 1.2rem; }
+  .control__policy--label {
+    justify-content: center; }
+
+.control__input-group {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%; }
+
+.control__label {
+  margin-bottom: -7px; }
+
+.control__button {
+  padding: 1.2857rem 4.785rem; }
+
+.video__play {
+  position: relative;
+  margin: auto; }
 
 .types__section-title {
   margin-bottom: 2.21rem; }
@@ -825,7 +874,6 @@ img {
     margin-top: 3.642rem;
     max-height: 26.9rem; }
     .steps__swiper-container-pictures img {
-      -o-object-fit: cover;
       object-fit: cover; }
   .steps__swiper-pagination--fraction {
     position: static;
@@ -1026,14 +1074,8 @@ img {
       color: #ffffff; }
     .design__card {
       position: relative; }
-      .design__card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(19, 19, 19, 0); }
+    .design-image-wrap:before {
+      display: none; }
   .card__pricetag {
     min-width: 190.4px;
     min-height: 40px;
