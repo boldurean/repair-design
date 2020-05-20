@@ -135,4 +135,54 @@ $(document).ready(function () {
         $(prevSlide).addClass('not-active');
     });
 
-})
+    //валидация формы
+    $('.modal__form').validate({
+        errorClass: 'invalid',
+        errorElement: 'div',
+        rules: {
+            // срочное правило
+            userName: {
+                required: true,
+                minlength: 2,
+                maxlength: 15
+            },
+            userPhone: "required",
+            // правило-объект
+            userEmail: {
+                required: true,
+                email: true
+            }
+        }, //сообщения
+        messages: {
+            userName: {
+                required: "Заполните поле",
+                minlength: "Имя должно быть не короче 2-х букв",
+                maxlength: "Имя не должно быть длиннее 15-и букв"
+            },
+            userPhone: "Заполните поле",
+            userEmail: {
+                required: "Заполните поле",
+                email: "Введите корректный email",
+            }
+        }
+    });
+
+    //маска для номера телефона
+    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
+
+    $(".modal__form").validate({
+        highlight: function(element, errorClass, validClass) {
+            $(element).addClass(errorClass).removeClass(validClass);
+            $(element.form).find("label[for=" + element.id + "]")
+                .addClass(errorClass);
+        },
+        unhighlight: function(element, errorClass, validClass) {
+            $(element).removeClass(errorClass).addClass(validClass);
+            $(element.form).find("label[for=" + element.id + "]")
+                .removeClass(errorClass);
+        }
+
+    });
+
+});

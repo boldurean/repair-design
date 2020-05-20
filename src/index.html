@@ -23,6 +23,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -507,18 +509,76 @@
       </section>
 
     </main>
+    <footer class="footer section--dark">
+      <div class="container">
+        <div class="footer__wrap">
+          <h3 class="footer__title">Остались вопросы?</h3>
+          <form action="#" class="footer__form">
+            <div class="input-group footer__input-group">
+              <label for="footer__user-name" class="label label--light form__label">Имя</label>
+              <input type="text" class="input form__input footer__input input--light" id="footer__user-name" placeholder="Как вас зовут:">
+            </div>
+            <div class="input-group footer__input-group">
+              <label for="footer__user-phone" class="label label--light form__label">Телефон</label>
+              <input type="tel" class="input form__input footer__input input--light" id="footer__user-phone" placeholder="Ваш номер телефона:">
+            </div>
+            <div class="input-group footer__input-group footer__input-group--full-width">
+              <label for="footer__user-question" class="label label--light form__label">Вопрос</label>
+              <input type="text" class="input form__input footer__input input--light" id="footer__user-question" placeholder="Я хочу спросить:">
+            </div>
+            <div class="policy footer__policy">
+              <input type="checkbox" name="policy-checkbox" id="footer__policy-checkbox" class="policy-checkbox footer__policy-checkbox" checked>
+              <label for="footer__policy-checkbox" class="policy__label policy__label--center footer__policy-label">Я соглашаюсь с обработкой данных</label>
+            </div>
+            <!-- /.policy -->
+            <button class="button button--primary footer__button">Отправить</button>
+          </form>
+        </div>
+        <!-- /.footer-wrap -->
+      </div>
+      <!-- /.container -->
+        <div class="footer__menu">
+          <div class="container">
+            <div class="menu">
+              <a href="#" class="logo menu__logo">Repair Design Project</a>
+              <nav class="nav menu__nav">
+                <a href="#" class="nav__item">Главная</a>
+                <a href="#" class="nav__item">Проекты</a>
+                <a href="#" class="nav__item">Замер</a>
+                <a href="#" class="nav__item">Команда</a>
+                <a href="#" class="nav__item">Отзывы</a>
+                <a href="#" class="nav__item">Контакты</a>
+              </nav>
+              <div class="contacts menu__contacts">
+                <a href="tel:+7(999)768-32-99" class="phone contacts__phone">+7 (999) 768-32-99</a>
+                <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
+              </div>
+            </div>
+            <!-- /.menu -->
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.footer__menu -->
+    </footer>
+    <!-- /.footer section section--dark -->
     <a href="#" class="scrollToTop"></a>
     <div class="modal">
       <div class="modal__dialog">
         <button class="modal__close"></button>
         <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
-        <form action="#" class="modal__form">
-          <label for="user-name" class="label label--light form__label">Имя</label>
-          <input type="text" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
-          <label for="user-phone" class="label label--light form__label">Телефон</label>
-          <input type="tel" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
-          <label for="user-email" class="label label--light form__label">Email</label>
-          <input type="email" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email:">
+        <form action="#" class="form modal__form">
+          <div class="input-group modal__input-group">
+            <label for="user-name" class="label label--light form__label">Имя</label>
+            <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
+          </div>
+          <div class="input-group modal__input-group">
+            <label for="user-phone" class="label label--light form__label">Телефон</label>
+            <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
+          </div>
+          <div class="input-group modal__input-group">
+            <label for="user-email" class="label label--light form__label">Email</label>
+            <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email:">
+          </div>
           <div class="policy modal__policy">
             <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
             <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
@@ -532,6 +592,9 @@
     <!-- /.modal -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

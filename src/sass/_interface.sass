@@ -21,6 +21,7 @@
   font-size: 1.071rem
   &--light
     color: rgba($light, 0.5)
+
 .input
   font-size: 1.285714rem
   color: $light
@@ -32,6 +33,7 @@
     &::placeholder
       color: $light
 
+
 .policy
   &__checkbox
     opacity: 0
@@ -41,7 +43,7 @@
         background: $primary url("../img/modal/checked.svg") no-repeat center / 10px
   &__label
     display: flex
-    font-size: 16px
+    font-size: 1.142rem
     align-items: center
     &:before
       content: ''
@@ -51,6 +53,9 @@
       border-radius: 1px
       cursor: pointer
       margin-right: 0.64rem
+    &--center
+      justify-content: center
+
 
 
 .scrollToTop
@@ -69,3 +74,14 @@
     background: transparent url("../img/arrow-up-primary.svg") no-repeat center
     box-shadow: 0 5px 15px rgba($primary, 0.7)
     text-decoration: none
+
+
+div
+ &.invalid
+   padding-top: 1rem
+   color: tomato
+   border-bottom: none
+
+.invalid
+  border-bottom: 1px solid red
+

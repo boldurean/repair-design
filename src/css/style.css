@@ -359,7 +359,7 @@ template {
 
 .policy__label {
   display: flex;
-  font-size: 16px;
+  font-size: 1.142rem;
   align-items: center; }
   .policy__label:before {
     content: '';
@@ -369,6 +369,8 @@ template {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+  .policy__label--center {
+    justify-content: center; }
 
 .scrollToTop {
   position: fixed;
@@ -386,6 +388,14 @@ template {
     background: transparent url("../img/arrow-up-primary.svg") no-repeat center;
     box-shadow: 0 5px 15px rgba(227, 184, 115, 0.7);
     text-decoration: none; }
+
+div.invalid {
+  padding-top: 1rem;
+  color: tomato;
+  border-bottom: none; }
+
+.invalid {
+  border-bottom: 1px solid red; }
 
 .container {
   width: 88%;
@@ -767,6 +777,9 @@ img {
 .control__label {
   margin-bottom: -7px; }
 
+.control__input {
+  color: #363636; }
+
 .control__button {
   padding: 1.2857rem 4.785rem; }
 
@@ -980,6 +993,52 @@ img {
   padding-left: 2.85rem;
   overflow: hidden; }
 
+.footer {
+  background: #131313 url("../img/footer/footer-bg.jpg") no-repeat center/cover;
+  padding-top: 3rem; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: auto auto 3.714rem;
+    padding: 2.5rem; }
+  .footer__title {
+    text-transform: uppercase;
+    font-family: "Yeseva One", serif;
+    font-weight: normal;
+    font-size: 1.428rem;
+    text-align: center;
+    margin-bottom: 3.214rem; }
+  .footer__form {
+    margin: auto;
+    max-width: 37.142rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .footer__input {
+    padding-top: 0.3rem; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.285rem 4.785rem; }
+  .footer__policy {
+    margin-bottom: 3.6rem;
+    flex-basis: 100%; }
+    .footer__policy-checkbox {
+      opacity: 0;
+      visibility: hidden; }
+      .footer__policy-checkbox:checked + .policy__label:before {
+        background: #E3B873 url("../img/modal/checked.svg") no-repeat center/10px; }
+  .footer__menu {
+    padding: 4.285rem 0;
+    background-color: #131313; }
+
 .modal {
   position: fixed;
   z-index: 199;
@@ -1027,12 +1086,14 @@ img {
     flex-direction: column; }
   .modal__policy {
     margin-bottom: 2.7rem; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.328rem; }
-    .modal__input:last-of-type {
-      margin-bottom: -0.2rem; }
-    .modal__input:nth-of-type(2) {
-      margin-bottom: 3.3rem; }
+  .modal__input:last-of-type {
+    margin-bottom: -0.2rem; }
+  .modal__input:nth-of-type(2) {
+    margin-bottom: 3.3rem; }
   .modal__button {
     align-self: flex-end;
     padding: 1.214rem 3.214rem;

@@ -1,0 +1,46 @@
+.footer
+  background: $dark url("../img/footer/footer-bg.jpg") no-repeat center / cover
+  padding-top: 3rem
+  &__wrap
+    background-color: $black
+    max-width: 63.07rem
+    margin: auto auto 3.714rem
+    padding: 2.5rem
+  &__title
+    text-transform: uppercase
+    font-family: $yoseva
+    font-weight: normal
+    font-size: 1.428rem
+    text-align: center
+    margin-bottom: 3.214rem
+  &__form
+    margin: auto
+    max-width: 37.142rem
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__input
+    padding-top: 0.3rem
+    &-group
+      display: flex
+      flex-direction: column
+      flex-basis: 45%
+      margin-bottom: 3.2rem
+      &--full-width
+        flex-basis: 100%
+        margin-bottom: 2rem
+  &__button
+    margin: auto
+    padding: 1.285rem 4.785rem
+  &__policy
+    margin-bottom: 3.6rem
+    flex-basis: 100%
+    &-checkbox
+      opacity: 0
+      visibility: hidden
+      &:checked + .policy__label
+        &:before
+          background: $primary url("../img/modal/checked.svg") no-repeat center / 10px
+  &__menu
+    padding: 4.285rem 0
+    background-color: $dark
