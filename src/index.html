@@ -23,6 +23,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=6a622b0d-c7f6-4648-9793-c9f577d5a1b0&lang=ru_RU" type="text/javascript">
+    </script>
 
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
@@ -71,7 +73,7 @@
       </section>
       <!-- /.hero -->
       <section class="section section--dark projects">
-        <div class="container">
+        <div class="container projects__container">
           <div class="row row-projects">
             <div class="col-45">
               <div class="section-title section-title--left">
@@ -171,343 +173,450 @@
         <!-- /.container -->
       </section>
       <!-- /.section section-dark projects -->
-      <section class="section control">
-        <div class="container">
-          <div class="section-title control__section-title section-title--light">
-            <h2 class="section-title__heading">Онлайн контроль</h2>
+      <div class="clsContainer">
+        <section class="section control one">
+          <div class="container">
+            <div class="section-title control__section-title section-title--light">
+              <h2 class="section-title__heading">Онлайн контроль</h2>
+              <!-- /.section-title__heading -->
+              <div class="section-title__image">
+                <img src="img/video.svg" alt="video">
+              </div>
+              <!-- /.section-title__image -->
+            </div>
+            <!-- /.section-title -->
+            <div class="control__video video">
+              <img src="img/play-icon.svg" alt="play icon" class="video__play">
+            </div>
+            <!-- /.control__video video -->
+            <p class="control__text">
+              На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на
+              наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов!
+              Оставьте заявку ниже чтобы получить ссылку на трансляцию.
+            </p>
+            <form action="#" class="control__form">
+              <div class="control__input-group">
+                <label for="user-name--control" class="label label form__label control__label">Имя</label>
+                <input type="text" class="input form__input control__input" id="user-name--control" placeholder="Как вас зовут:">
+              </div>
+              <div class="control__input-group">
+                <label for="user-phone--control" class="label label form__label control__label">Телефон</label>
+                <input type="tel" class="input form__input control__input" id="user-phone--control"
+                       placeholder="Ваш номер телефона:">
+              </div>
+
+              <button class="button button--primary control__button">Отправить</button>
+              <div class="policy control__policy">
+                <input type="checkbox" name="policy-checkbox" id="policy-checkbox--control" class="policy__checkbox" checked>
+                <label for="policy-checkbox--control" class="policy__label control__policy--label">Я соглашаюсь с обработкой
+                                                                                                   данных</label>
+              </div>
+              <!-- /.policy -->
+            </form>
+          </div>
+          <!-- /.container -->
+        </section>
+                                <!-- /.section control -->
+        <section class="section types two">
+          <div class="container">
+            <div class="section-title types__section-title">
+              <h2 class="section-title__heading">Виды ремонта</h2>
+              <!-- /.section-title__heading -->
+              <div class="section-title__image">
+                <img src="img/tools.svg" alt="tools">
+              </div>
+              <!-- /.section-title__image -->
+            </div>
+            <!-- /.section-title -->
+            <div class="row">
+              <div class="col-30">
+                <div class="card types__card">
+                  <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__image">
+                  <div class="card__text">
+                    <div class="h3 card__title">Косметический ремонт</div>
+                    <ul class="card__list">
+                      <li class="card__item">Демонтаж старых покрытий</li>
+                      <li class="card__item">Поклейка обоев</li>
+                      <li class="card__item">Роспись стен и потолков</li>
+                      <li class="card__item">Укладка полов</li>
+                      <li class="card__item">Замена сантехники</li>
+                      <li class="card__item">Замена розеток и выключателей</li>
+                      <li class="card__item">Замена дверей</li>
+                    </ul>
+                    <!-- /.card__list -->
+                    <strong class="card__pricetag">
+                      от 900 руб / m<sup>2</sup>
+                    </strong>
+                  </div>
+                  <!-- /.card__text -->
+                </div>
+                <!-- /.card -->
+              </div>
+              <div class="col-30">
+                <div class="card types__card"><img src="img/types/type-2.jpg" alt="Капитальный ремонт" class="card__image">
+                  <div class="card__text">
+                    <div class="h3 card__title">Капитальный ремонт</div>
+                    <ul class="card__list">
+                      <li class="card__item">Демонтаж старых покрытий</li>
+                      <li class="card__item">Поклейка обоев</li>
+                      <li class="card__item">Роспись стен и потолков</li>
+                      <li class="card__item">Укладка полов</li>
+                      <li class="card__item">Замена сантехники</li>
+                      <li class="card__item">Замена розеток и выключателей</li>
+                      <li class="card__item">Замена дверей</li>
+                    </ul>
+                    <!-- /.card__list -->
+                    <strong class="card__pricetag">
+                      от 1800 руб / m<sup>2</sup>
+                    </strong>
+                  </div>
+                  <!-- /.card__text -->
+                </div>
+                <!-- /.card -->
+              </div>
+              <div class="col-30">
+                <div class="card types__card"><img src="img/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
+                  <div class="card__text">
+                    <div class="h3 card__title">Дизайнерский ремонт</div>
+                    <ul class="card__list">
+                      <li class="card__item">Демонтаж старых покрытий</li>
+                      <li class="card__item">Поклейка обоев</li>
+                      <li class="card__item">Роспись стен и потолков</li>
+                      <li class="card__item">Укладка полов</li>
+                      <li class="card__item">Замена сантехники</li>
+                      <li class="card__item">Замена розеток и выключателей</li>
+                      <li class="card__item">Замена дверей</li>
+                    </ul>
+                    <!-- /.card__list -->
+                    <strong class="card__pricetag">
+                      от 4000 руб / m<sup>2</sup>
+                    </strong>
+                  </div>
+                  <!-- /.card__text -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div>
+          </div>
+          <!-- /.container -->
+        </section>
+      </div>
+      <!-- /.clsContainer -->
+
+      <div class="cdsContainer">
+        <section class="section design">
+          <div class="container design__container">
+            <div class="section-title design__section-title">
+              <h2 class="section-title__heading">Дизайн проект</h2>
+              <!-- /.section-title__heading -->
+              <div class="section-title__image">
+                <img src="img/design/pencil.svg" alt="pencil">
+              </div>
+              <!-- /.section-title__image -->
+            </div>
+            <!-- /.section-title -->
+            <p class="design__description">Дизайн-проект не только помогает сделать ремонт вашей квартиры более современным, но и
+                                           значительно удешевляет
+                                           материалы и сокращает время ремонтных работ</p>
+            <div class="row">
+              <div class="col-30">
+                <div class="card design__card">
+                  <div class="design-image-wrap">
+                    <img src="img/design/design-1.jpg" alt="Косметический ремонт" class="card__image">
+                  </div>
+                  <div class="card__text">
+                    <div class="h3 card__title">Минимальный</div>
+                    <ul class="card__list">
+                      <li class="card__item">Измерительные чертежи</li>
+                      <li class="card__item">Перепланировка</li>
+                      <li class="card__item">Планировка мебели</li>
+                      <li class="card__item">Сантехнический план</li>
+                    </ul>
+                    <!-- /.card__list -->
+                    <strong class="card__pricetag design__pricetag">
+                      150 руб / m<sup>2</sup>
+                    </strong>
+                  </div>
+                  <!-- /.card__text -->
+                </div>
+                <!-- /.card -->
+              </div>
+              <div class="col-30">
+                <div class="card design__card">
+                  <div class="design-image-wrap">
+                    <img src="img/design/design-2.jpg" alt="Косметический ремонт" class="card__image">
+                  </div>
+                  <div class="card__text">
+                    <div class="h3 card__title">Стандартный</div>
+                    <ul class="card__list">
+                      <li class="card__item">Измерительные чертежи</li>
+                      <li class="card__item">Перепланировка</li>
+                      <li class="card__item">Планировка мебели</li>
+                      <li class="card__item">План потолков</li>
+                      <li class="card__item">План этажей</li>
+                      <li class="card__item">План электрики</li>
+                      <li class="card__item">План света</li>
+                    </ul>
+                    <!-- /.card__list -->
+                    <strong class="card__pricetag design__pricetag">
+                      400 руб / m<sup>2</sup>
+                    </strong>
+                  </div>
+                  <!-- /.card__text -->
+                </div>
+                <!-- /.card -->
+              </div>
+              <div class="col-30">
+                <div class="card design__card">
+                  <div class="design-image-wrap">
+                    <img src="img/design/design-3.jpg" alt="Косметический ремонт" class="card__image">
+                  </div>
+                  <div class="card__text">
+                    <div class="h3 card__title">Полный</div>
+                    <ul class="card__list card__list">
+                      <li class="card__item">Измерительные чертежи</li>
+                      <li class="card__item">Перепланировка</li>
+                      <li class="card__item">Планировка мебели</li>
+                      <li class="card__item">План потолков</li>
+                      <li class="card__item">План этажей</li>
+                      <li class="card__item">План электрики</li>
+                      <li class="card__item ">План света</li>
+                      <li class="card__item">Стенные развертки</li>
+                      <li class="card__item">3D визуализация</li>
+                      <li class="card__item">Смета на материалы</li>
+                      <li class="card__item">Выезд на подбор материалов</li>
+                      <li class="card__item">Выбор мебели</li>
+                    </ul>
+                    <!-- /.card__list -->
+                    <strong class="card__pricetag design__pricetag">
+                      900 руб / m<sup>2</sup>
+                    </strong>
+                  </div>
+                  <!-- /.card__text -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div>
+          </div>
+          <!-- /.container -->
+        </section>
+        <!-- /.section design -->
+        <section class="section--dark section steps">
+          <div class="container steps-container">
+            <div class="row steps__row">
+              <div class="col-35">
+                <span class="how-do-we-work">как мы работаем</span>
+                <div class="section-title section-title--left">
+                  <h2 class="section-title__heading section-title__heading--primary steps__heading">6 шагов <span
+                          class="section-title__word steps__heading--word">до цели</span></h2>
+                </div>
+                <div class="swiper-no-swiping swiper-container steps__swiper-container steps__swiper-container-one">
+                  <div class="swiper-pagination steps__swiper-pagination--fraction"></div>
+                </div>
+                <!-- Slider main container -->
+                <div class="swiper-no-swiping swiper-container steps__swiper-container steps__swiper-container-two">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper steps__swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide steps__swiper-slide">
+                      <h4 class="steps__swiper-slide--header">Выезд на замеры помещения</h4>
+                      <p class="steps__swiper-slide--text">После вашего звонка мы идем к вам, чтобы проконсультироваться и
+                                                           измерить помещения вашей квартиры. Во время нашей встречи вы можете
+                                                           задать абсолютно любые вопросы, касаемо ремонта. </p>
+                      <p class="steps__swiper-slide--text">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по
+                                                           вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
+                                                           целом и отдельных ее этапов.</p>
+                    </div>
+                    <div class="swiper-slide steps__swiper-slide">
+                      <h4 class="steps__swiper-slide--header">Выезд на замеры помещения</h4>
+                      <p class="steps__swiper-slide--text">После вашего звонка мы идем к вам, чтобы проконсультироваться и
+                                                           измерить помещения вашей квартиры. Во время нашей встречи вы можете
+                                                           задать абсолютно любые вопросы, касаемо ремонта. </p>
+                      <p class="steps__swiper-slide--text">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по
+                                                           вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
+                                                           целом и отдельных ее этапов.</p>
+                    </div>
+                    <div class="swiper-slide steps__swiper-slide">
+                      <h4 class="steps__swiper-slide--header">Выезд на замеры помещения</h4>
+                      <p class="steps__swiper-slide--text">После вашего звонка мы идем к вам, чтобы проконсультироваться и
+                                                           измерить помещения вашей квартиры. Во время нашей встречи вы можете
+                                                           задать абсолютно любые вопросы, касаемо ремонта. </p>
+                      <p class="steps__swiper-slide--text">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по
+                                                           вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
+                                                           целом и отдельных ее этапов.</p>
+                    </div>
+                    <div class="swiper-slide steps__swiper-slide">
+                      <h4 class="steps__swiper-slide--header">Выезд на замеры помещения</h4>
+                      <p class="steps__swiper-slide--text">После вашего звонка мы идем к вам, чтобы проконсультироваться и
+                                                           измерить помещения вашей квартиры. Во время нашей встречи вы можете
+                                                           задать абсолютно любые вопросы, касаемо ремонта. </p>
+                      <p class="steps__swiper-slide--text">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по
+                                                           вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
+                                                           целом и отдельных ее этапов.</p>
+                    </div>
+                    <div class="swiper-slide steps__swiper-slide">
+                      <h4 class="steps__swiper-slide--header">Выезд на замеры помещения</h4>
+                      <p class="steps__swiper-slide--text">После вашего звонка мы идем к вам, чтобы проконсультироваться и
+                                                           измерить помещения вашей квартиры. Во время нашей встречи вы можете
+                                                           задать абсолютно любые вопросы, касаемо ремонта. </p>
+                      <p class="steps__swiper-slide--text">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по
+                                                           вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
+                                                           целом и отдельных ее этапов.</p>
+                    </div>
+                    <div class="swiper-slide steps__swiper-slide">
+                      <h4 class="steps__swiper-slide--header">Выезд на замеры помещения</h4>
+                      <p class="steps__swiper-slide--text">После вашего звонка мы идем к вам, чтобы проконсультироваться и
+                                                           измерить помещения вашей квартиры. Во время нашей встречи вы можете
+                                                           задать абсолютно любые вопросы, касаемо ремонта. </p>
+                      <p class="steps__swiper-slide--text">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по
+                                                           вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
+                                                           целом и отдельных ее этапов.</p>
+                    </div>
+
+                  </div>
+
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev steps__swiper-button-prev"></div>
+                  <div class="swiper-pagination steps__swiper-pagination--bullets"></div>
+                  <div class="swiper-button-next steps__swiper-button-next"></div>
+                </div>
+              </div>
+              <div class="col-65 steps-col--65">
+                <div class="row steps-buttons">
+                  <div class="steps-buttons--wrap button-0">
+                    <h5 class="steps-buttons--header">01</h5>
+                    <small class="steps-buttons--text">Выезд на замер помещения</small>
+                  </div>
+                  <div class="steps-buttons--wrap button-1 not-active">
+                    <h5 class="steps-buttons--header">02</h5>
+                    <small class="steps-buttons--text">Составление <br> сметы</small>
+                  </div>
+                  <div class="steps-buttons--wrap button-2 not-active">
+                    <h5 class="steps-buttons--header">03</h5>
+                    <small class="steps-buttons--text">Разработка <br> дизайн проекта</small>
+                  </div>
+                </div>
+                <!-- /.row steps-buttons -->
+                <div class="row steps-buttons">
+                  <div class="steps-buttons--wrap button-3 not-active">
+                    <h5 class="steps-buttons--header">04</h5>
+                    <small class="steps-buttons--text">Закупка расходных материалов</small>
+                  </div>
+                  <div class="steps-buttons--wrap button-4 not-active">
+                    <h5 class="steps-buttons--header">05</h5>
+                    <small class="steps-buttons--text">Ремонтно-отделочные работы</small>
+                  </div>
+                  <div class="steps-buttons--wrap button-5 not-active">
+                    <h5 class="steps-buttons--header">06</h5>
+                    <small class="steps-buttons--text">Приемка-сдача работ</small>
+                  </div>
+                </div>
+                <!-- /.row steps-buttons -->
+                <div class="swiper-no-swiping swiper-container steps__swiper-container-one steps__swiper-container-pictures">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper steps__swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide steps__swiper-slide">
+                      <img src="img/steps/steps-1.jpg" alt="steps-photo">
+                    </div>
+                    <div class="swiper-slide steps__swiper-slide">
+                      <img src="img/steps/steps-2.jpg" alt="steps-photo">
+                    </div>
+                    <div class="swiper-slide steps__swiper-slide">
+                      <img src="img/steps/steps-3.jpg" alt="steps-photo">
+                    </div>
+                    <div class="swiper-slide steps__swiper-slide">
+                      <img src="img/steps/steps-4.jpg" alt="steps-photo">
+                    </div>
+                    <div class="swiper-slide steps__swiper-slide">
+                      <img src="img/steps/steps-5.jpg" alt="steps-photo">
+                    </div>
+                    <div class="swiper-slide steps__swiper-slide">
+                      <img src="img/steps/steps-6.jpg" alt="steps-photo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.container -->
+        </section>
+      </div>
+      <!-- /.cdsContainer -->
+
+      <section class="section clients">
+        <div class="container clients__container">
+          <div class="section-title clients__section-title section-title--dark">
+            <h2 class="section-title__heading">Наши клиенты</h2>
             <!-- /.section-title__heading -->
             <div class="section-title__image">
-              <img src="img/video.svg" alt="video">
+              <img src="img/clients/clients-icon.svg" alt="video">
             </div>
             <!-- /.section-title__image -->
           </div>
           <!-- /.section-title -->
-          <div class="control__video video">
-            <img src="img/play-icon.svg" alt="play icon" class="video__play">
+          <p class="description clients__description">80% наших клиентов рекомендуют нас своим знакомым и друзьям</p>
+          <div class="clients-reviews">
+            <div class="clients-reviews__card review-card">
+              <div class="review-card--head">
+                <img src="img/clients/photo-1.jpg" alt="" class="review-card__photo">
+                <h5 class="review-card__name">
+                  Савельева Екатерина&nbsp;Львовна</h5>
+              </div>
+              <div class="review-card__body">
+                <span class="review-card__body--text">
+                  Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.
+                </span>
+                <div class="review-card__body__info">
+                  <span class="review-card__body--volume">40 m <sup>2</sup></span>
+                  <span class="review-card__body--time">48 дней</span>
+                </div>
+              </div>
+              <!-- /.clients-reviews__card -->
+            </div>
+            <!-- /.clients-reviews__card -->
+            <div class="clients-reviews__card review-card">
+              <div class="review-card--head">
+                <img src="img/clients/photo-2.jpg" alt="" class="review-card__photo">
+                <h5 class="review-card__name">
+                  Большов&nbsp;Михаил Анатольевич</h5>
+              </div>
+              <div class="review-card__body">
+                <span class="review-card__body--text">
+                  Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.
+                </span>
+                <div class="review-card__body__info">
+                  <span class="review-card__body--volume">90 m <sup>2</sup></span>
+                  <span class="review-card__body--time">128 дней</span>
+                </div>
+              </div>
+              <!-- /.clients-reviews__card -->
+            </div>
+            <!-- /.clients-reviews__card -->
+            <div class="clients-reviews__card review-card">
+              <div class="review-card--head">
+                <img src="img/clients/photo-3.jpg" alt="" class="review-card__photo">
+                <h5 class="review-card__name">
+                  Хасанов&nbsp;Даниил <br> Муратович</h5>
+              </div>
+              <div class="review-card__body">
+                <span class="review-card__body--text">
+                  Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.
+                </span>
+                <div class="review-card__body__info">
+                  <span class="review-card__body--volume">56 m <sup>2</sup></span>
+                  <span class="review-card__body--time">86 дней</span>
+                </div>
+              </div>
+              <!-- /.clients-reviews__card -->
+            </div>
+            <!-- /.clients-reviews__card -->
           </div>
-          <!-- /.control__video video -->
-          <p class="control__text">
-            На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
-          </p>
-          <form action="#" class="control__form">
-            <div class="control__input-group">
-              <label for="user-name--control" class="label label form__label control__label">Имя</label>
-              <input type="text" class="input form__input control__input" id="user-name--control" placeholder="Как вас зовут:">
-            </div>
-            <div class="control__input-group">
-              <label for="user-phone--control" class="label label form__label control__label">Телефон</label>
-              <input type="tel" class="input form__input control__input" id="user-phone--control"
-                     placeholder="Ваш номер телефона:">
-            </div>
-
-            <button class="button button--primary control__button">Отправить</button>
-            <div class="policy control__policy">
-              <input type="checkbox" name="policy-checkbox" id="policy-checkbox--control" class="policy__checkbox" checked>
-              <label for="policy-checkbox--control" class="policy__label control__policy--label">Я соглашаюсь с обработкой данных</label>
-            </div>
-            <!-- /.policy -->
-          </form>
+          <!-- /.clients-reviews -->
         </div>
-        <!-- /.container -->
+        <!-- /.container clients__container -->
       </section>
-      <!-- /.section control -->
-      <section class="section types">
-        <div class="container">
-          <div class="section-title types__section-title">
-            <h2 class="section-title__heading">Виды ремонта</h2>
-            <!-- /.section-title__heading -->
-            <div class="section-title__image">
-              <img src="img/tools.svg" alt="tools">
-            </div>
-            <!-- /.section-title__image -->
-          </div>
-          <!-- /.section-title -->
-          <div class="row">
-            <div class="col-30">
-              <div class="card types__card">
-                <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__image">
-                <div class="card__text">
-                  <div class="h3 card__title">Косметический ремонт</div>
-                  <ul class="card__list">
-                    <li class="card__item">Демонтаж старых покрытий</li>
-                    <li class="card__item">Поклейка обоев</li>
-                    <li class="card__item">Роспись стен и потолков</li>
-                    <li class="card__item">Укладка полов</li>
-                    <li class="card__item">Замена сантехники</li>
-                    <li class="card__item">Замена розеток и выключателей</li>
-                    <li class="card__item">Замена дверей</li>
-                  </ul>
-                  <!-- /.card__list -->
-                  <strong class="card__pricetag">
-                    от 900 руб / m<sup>2</sup>
-                  </strong>
-                </div>
-                <!-- /.card__text -->
-              </div>
-              <!-- /.card -->
-            </div>
-            <div class="col-30">
-              <div class="card types__card"><img src="img/types/type-2.jpg" alt="Капитальный ремонт" class="card__image">
-                <div class="card__text">
-                  <div class="h3 card__title">Капитальный ремонт</div>
-                  <ul class="card__list">
-                    <li class="card__item">Демонтаж старых покрытий</li>
-                    <li class="card__item">Поклейка обоев</li>
-                    <li class="card__item">Роспись стен и потолков</li>
-                    <li class="card__item">Укладка полов</li>
-                    <li class="card__item">Замена сантехники</li>
-                    <li class="card__item">Замена розеток и выключателей</li>
-                    <li class="card__item">Замена дверей</li>
-                  </ul>
-                  <!-- /.card__list -->
-                  <strong class="card__pricetag">
-                    от 1800 руб / m<sup>2</sup>
-                  </strong>
-                </div>
-                <!-- /.card__text -->
-              </div>
-              <!-- /.card -->
-            </div>
-            <div class="col-30">
-              <div class="card types__card"><img src="img/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
-                <div class="card__text">
-                  <div class="h3 card__title">Дизайнерский ремонт</div>
-                  <ul class="card__list">
-                    <li class="card__item">Демонтаж старых покрытий</li>
-                    <li class="card__item">Поклейка обоев</li>
-                    <li class="card__item">Роспись стен и потолков</li>
-                    <li class="card__item">Укладка полов</li>
-                    <li class="card__item">Замена сантехники</li>
-                    <li class="card__item">Замена розеток и выключателей</li>
-                    <li class="card__item">Замена дверей</li>
-                  </ul>
-                  <!-- /.card__list -->
-                  <strong class="card__pricetag">
-                    от 4000 руб / m<sup>2</sup>
-                  </strong>
-                </div>
-                <!-- /.card__text -->
-              </div>
-              <!-- /.card -->
-            </div>
-          </div>
-        </div>
-        <!-- /.container -->
-      </section>
-      <!-- /.section types -->
-
-      <section class="section design">
-        <div class="container">
-          <div class="section-title design__section-title">
-            <h2 class="section-title__heading">Дизайн проект</h2>
-            <!-- /.section-title__heading -->
-            <div class="section-title__image">
-              <img src="img/design/pencil.svg" alt="pencil">
-            </div>
-            <!-- /.section-title__image -->
-          </div>
-          <!-- /.section-title -->
-          <p class="design__description">Дизайн-проект не только помогает сделать ремонт вашей квартиры более современным, но и значительно удешевляет
-             материалы и сокращает время ремонтных работ</p>
-          <div class="row">
-            <div class="col-30">
-              <div class="card design__card">
-                <div class="design-image-wrap">
-                  <img src="img/design/design-1.jpg" alt="Косметический ремонт" class="card__image">
-                </div>
-                <div class="card__text">
-                  <div class="h3 card__title">Минимальный</div>
-                  <ul class="card__list">
-                    <li class="card__item">Измерительные чертежи</li>
-                    <li class="card__item">Перепланировка</li>
-                    <li class="card__item">Планировка мебели</li>
-                    <li class="card__item">Сантехнический план</li>
-                  </ul>
-                  <!-- /.card__list -->
-                  <strong class="card__pricetag design__pricetag">
-                    150 руб / m<sup>2</sup>
-                  </strong>
-                </div>
-                <!-- /.card__text -->
-              </div>
-              <!-- /.card -->
-            </div>
-            <div class="col-30">
-              <div class="card design__card">
-                <div class="design-image-wrap">
-                  <img src="img/design/design-2.jpg" alt="Косметический ремонт" class="card__image">
-                </div>
-                <div class="card__text">
-                  <div class="h3 card__title">Стандартный</div>
-                  <ul class="card__list">
-                    <li class="card__item">Измерительные чертежи</li>
-                    <li class="card__item">Перепланировка</li>
-                    <li class="card__item">Планировка мебели</li>
-                    <li class="card__item">План потолков</li>
-                    <li class="card__item">План этажей</li>
-                    <li class="card__item">План электрики</li>
-                    <li class="card__item">План света</li>
-                  </ul>
-                  <!-- /.card__list -->
-                  <strong class="card__pricetag design__pricetag">
-                    400 руб / m<sup>2</sup>
-                  </strong>
-                </div>
-                <!-- /.card__text -->
-              </div>
-              <!-- /.card -->
-            </div>
-            <div class="col-30">
-              <div class="card design__card">
-                <div class="design-image-wrap">
-                  <img src="img/design/design-3.jpg" alt="Косметический ремонт" class="card__image">
-                </div>
-                <div class="card__text">
-                  <div class="h3 card__title">Полный</div>
-                  <ul class="card__list card__list">
-                    <li class="card__item">Измерительные чертежи</li>
-                    <li class="card__item">Перепланировка</li>
-                    <li class="card__item">Планировка мебели</li>
-                    <li class="card__item">План потолков</li>
-                    <li class="card__item">План этажей</li>
-                    <li class="card__item">План электрики</li>
-                    <li class="card__item ">План света</li>
-                    <li class="card__item">Стенные развертки</li>
-                    <li class="card__item">3D визуализация</li>
-                    <li class="card__item">Смета на материалы</li>
-                    <li class="card__item">Выезд на подбор материалов</li>
-                    <li class="card__item">Выбор мебели</li>
-                  </ul>
-                  <!-- /.card__list -->
-                  <strong class="card__pricetag design__pricetag">
-                    900 руб / m<sup>2</sup>
-                  </strong>
-                </div>
-                <!-- /.card__text -->
-              </div>
-              <!-- /.card -->
-            </div>
-          </div>
-        </div>
-        <!-- /.container -->
-      </section>
-      <!-- /.section design -->
-      <section class="section--dark section steps">
-        <div class="container steps-container">
-          <div class="row steps__row">
-            <div class="col-35">
-              <span class="how-do-we-work">как мы работаем</span>
-              <div class="section-title section-title--left">
-                <h2 class="section-title__heading section-title__heading--primary steps__heading">6 шагов <span class="section-title__word steps__heading--word">до цели</span></h2>
-              </div>
-              <div class="swiper-no-swiping swiper-container steps__swiper-container steps__swiper-container-one">
-                <div class="swiper-pagination steps__swiper-pagination--fraction"></div>
-              </div>
-              <!-- Slider main container -->
-              <div class="swiper-no-swiping swiper-container steps__swiper-container steps__swiper-container-two">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper steps__swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide steps__swiper-slide">
-                    <h4 class="steps__swiper-slide--header">Выезд на замеры помещения</h4>
-                    <p class="steps__swiper-slide--text">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта. </p>
-                    <p class="steps__swiper-slide--text">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
-                  </div>
-                  <div class="swiper-slide steps__swiper-slide">
-                    <h4 class="steps__swiper-slide--header">Выезд на замеры помещения</h4>
-                    <p class="steps__swiper-slide--text">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта. </p>
-                    <p class="steps__swiper-slide--text">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
-                  </div>
-                  <div class="swiper-slide steps__swiper-slide">
-                    <h4 class="steps__swiper-slide--header">Выезд на замеры помещения</h4>
-                    <p class="steps__swiper-slide--text">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта. </p>
-                    <p class="steps__swiper-slide--text">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
-                  </div>
-                  <div class="swiper-slide steps__swiper-slide">
-                    <h4 class="steps__swiper-slide--header">Выезд на замеры помещения</h4>
-                    <p class="steps__swiper-slide--text">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта. </p>
-                    <p class="steps__swiper-slide--text">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
-                  </div>
-                  <div class="swiper-slide steps__swiper-slide">
-                    <h4 class="steps__swiper-slide--header">Выезд на замеры помещения</h4>
-                    <p class="steps__swiper-slide--text">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта. </p>
-                    <p class="steps__swiper-slide--text">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
-                  </div>
-                  <div class="swiper-slide steps__swiper-slide">
-                    <h4 class="steps__swiper-slide--header">Выезд на замеры помещения</h4>
-                    <p class="steps__swiper-slide--text">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта. </p>
-                    <p class="steps__swiper-slide--text">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
-                  </div>
-
-                </div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev steps__swiper-button-prev"></div>
-                <div class="swiper-pagination steps__swiper-pagination--bullets"></div>
-                <div class="swiper-button-next steps__swiper-button-next"></div>
-              </div>
-            </div>
-            <div class="col-65 steps-col--65">
-              <div class="row steps-buttons">
-                <div class="steps-buttons--wrap button-0">
-                  <h5 class="steps-buttons--header">01</h5>
-                  <small class="steps-buttons--text">Выезд на замер помещения</small>
-                </div>
-                <div class="steps-buttons--wrap button-1 not-active">
-                  <h5 class="steps-buttons--header">02</h5>
-                  <small class="steps-buttons--text">Составление <br> сметы</small>
-                </div>
-                <div class="steps-buttons--wrap button-2 not-active">
-                  <h5 class="steps-buttons--header">03</h5>
-                  <small class="steps-buttons--text">Разработка <br> дизайн проекта</small>
-                </div>
-              </div>
-              <!-- /.row steps-buttons -->
-              <div class="row steps-buttons">
-                <div class="steps-buttons--wrap button-3 not-active">
-                  <h5 class="steps-buttons--header">04</h5>
-                  <small class="steps-buttons--text">Закупка расходных материалов</small>
-                </div>
-                <div class="steps-buttons--wrap button-4 not-active">
-                  <h5 class="steps-buttons--header">05</h5>
-                  <small class="steps-buttons--text">Ремонтно-отделочные работы</small>
-                </div>
-                <div class="steps-buttons--wrap button-5 not-active">
-                  <h5 class="steps-buttons--header">06</h5>
-                  <small class="steps-buttons--text">Приемка-сдача работ</small>
-                </div>
-              </div>
-              <!-- /.row steps-buttons -->
-              <div class="swiper-no-swiping swiper-container steps__swiper-container-one steps__swiper-container-pictures">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper steps__swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide steps__swiper-slide">
-                    <img src="img/steps/steps-1.jpg" alt="steps-photo">
-                  </div>
-                  <div class="swiper-slide steps__swiper-slide">
-                    <img src="img/steps/steps-2.jpg" alt="steps-photo">
-                  </div>
-                  <div class="swiper-slide steps__swiper-slide">
-                    <img src="img/steps/steps-3.jpg" alt="steps-photo">
-                  </div>
-                  <div class="swiper-slide steps__swiper-slide">
-                    <img src="img/steps/steps-4.jpg" alt="steps-photo">
-                  </div>
-                  <div class="swiper-slide steps__swiper-slide">
-                    <img src="img/steps/steps-5.jpg" alt="steps-photo">
-                  </div>
-                  <div class="swiper-slide steps__swiper-slide">
-                    <img src="img/steps/steps-6.jpg" alt="steps-photo">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /.container -->
-      </section>
-
+      <!-- /.section clients -->
     </main>
     <footer class="footer section--dark">
       <div class="container">
@@ -535,6 +644,20 @@
           </form>
         </div>
         <!-- /.footer-wrap -->
+        <div class="footer__location location">
+          <h4 class="location__header">Ростов на дону, Торговый центр Plaza Прямой телефон +7 (999) 768 32 99</h4>
+          <div class="location__socials">
+            <a href="#" class="location__icon--wrap">
+              <img class="location__icon"  src="img/footer/mail-icon.svg" alt="mail-us">
+            </a>
+            <a href="#" class="location__icon--wrap">
+              <img class="location__icon" src="img/footer/instagram-icon.svg" alt="instagram">
+            </a>
+          </div>
+          <div class="location__map" id="map"></div>
+          <!--карты-->
+        </div>
+        <!-- /.footer__location -->
       </div>
       <!-- /.container -->
         <div class="footer__menu">

@@ -2,9 +2,10 @@
   background: $dark url("../img/footer/footer-bg.jpg") no-repeat center / cover
   padding-top: 3rem
   &__wrap
+    position: relative
     background-color: $black
     max-width: 63.07rem
-    margin: auto auto 3.714rem
+    margin: -19rem auto 3.714rem
     padding: 2.5rem
   &__title
     text-transform: uppercase
@@ -44,3 +45,44 @@
   &__menu
     padding: 4.285rem 0
     background-color: $dark
+  &__location
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.location
+  &__header
+    max-width: 37.07rem
+    text-align: center
+    text-transform: uppercase
+    font-family: $yoseva
+    font-size: 20px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.39
+    letter-spacing: normal
+    color: $primary
+  &__socials
+    display: flex
+    justify-content: center
+    align-items: center
+  &__icon
+    &--wrap
+      display: flex
+      align-items: center
+      justify-content: center
+      min-width: 28px
+      min-height: 28px
+      background-color: $primary
+      border-radius: 50%
+      flex-basis: 50%
+      margin-bottom: 3.09rem
+      &:not(:last-child)
+        margin-right: 15px
+  &__map
+    min-width: 66.07rem
+    min-height: 33.21rem
+    margin-bottom: 5rem
+

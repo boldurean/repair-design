@@ -1,0 +1,105 @@
+.clients
+  position: relative
+  padding-bottom: 30rem
+  &:after
+    height: 70%
+    width: 100%
+    content: ""
+    background: url("../img/clients/clients-bottom-bg.png")
+    bottom: 0
+    opacity: 0.1
+    position: absolute
+    z-index: -50
+  &__description
+    margin: 1.714rem auto 2.778rem
+    text-align: center
+    max-width: 25.71rem
+  &-reviews
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.review
+  &-card
+    position: relative
+    min-width: 26.85rem
+    min-height: 30.57rem
+    padding: 1.714rem 1.714rem 1.428rem
+    background: $light
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.04)
+    &--head
+      display: flex
+      justify-content: flex-start
+      align-items: center
+    &__name
+      font-family: $yoseva
+      font-size: 1.285rem
+      font-weight: normal
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.27
+      letter-spacing: normal
+      color: $black
+    &__photo
+      border-radius: 50%
+      margin-right: 1.714rem
+    &__body
+      margin-top: 1.65rem
+      &--text
+        font-family: $futuraBook
+        font-size: 15px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.8
+        letter-spacing: normal
+        color: $secondary
+      &__info
+        position: absolute
+        left: 0
+        bottom: -1.928rem
+        display: flex
+        justify-content: space-between
+        align-items: center
+      &--volume, &--time
+        font-family: $yoseva
+        font-size: 1.214rem
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.39
+        letter-spacing: normal
+        color: $light
+      &--volume
+        display: flex
+        align-items: center
+        margin-right: 1px
+        padding: 10px 20px
+        background-color: $primary
+        &:before
+          content: ''
+          width: 33px
+          height: 32px
+          margin-right: 1.1rem
+          background: transparent url("../img/clients/client-volume.svg")
+      &--time
+        display: flex
+        align-items: center
+        padding: 10px 20px
+        background-color: $primary
+        &:before
+          content: ''
+          width: 32.8px
+          height: 32.3px
+          margin-right: 1.1rem
+          background: transparent url("../img/clients/client-time.svg")
+
+
+
+
+
+
+
+
+
+
