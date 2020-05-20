@@ -1063,8 +1063,16 @@ img {
     background: url("../img/clients/clients-bottom-bg.png");
     bottom: 0;
     opacity: 0.1;
-    position: absolute;
-    z-index: -50; }
+    pointer-events: none;
+    position: absolute; }
+  .clients:before {
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: url("../img/vector-lines/bg-line-light.png") no-repeat center/cover;
+    bottom: 0;
+    pointer-events: none;
+    position: absolute; }
   .clients__description {
     margin: 1.714rem auto 2.778rem;
     text-align: center;
