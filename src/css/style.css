@@ -805,7 +805,7 @@ img {
     background-color: rgba(0, 0, 0, 0.8); }
 
 .control__text {
-  max-width: 40.785rem;
+  max-width: 40.685rem;
   margin: auto auto 4.285rem;
   text-align: center;
   font-size: 1.428rem;
@@ -843,7 +843,8 @@ img {
   color: #363636; }
 
 .control__button {
-  padding: 1.2857rem 4.785rem; }
+  padding: 1.1rem 4.185rem;
+  font-size: 15px; }
 
 .video__play {
   position: relative;
@@ -912,6 +913,8 @@ img {
     color: #363636; }
   .design__card {
     position: relative; }
+    .design__card__text {
+      margin-top: -9.23rem; }
   .design-image-wrap {
     position: relative; }
     .design-image-wrap img {
@@ -1061,12 +1064,14 @@ img {
   margin-top: -37rem;
   padding-bottom: 0; }
   .team__description {
-    margin: auto;
-    margin-bottom: 6.714rem;
+    margin: auto auto 7.314rem;
     max-width: 32rem;
+    line-height: 1.2;
     color: #ffffff; }
-  .team__title-img {
-    margin-bottom: 1.642rem; }
+  .team__title {
+    margin-bottom: 1rem; }
+    .team__title-img {
+      margin-bottom: 1.642rem; }
   .team__wrap {
     display: flex;
     justify-content: space-evenly;
@@ -1142,6 +1147,7 @@ img {
       align-items: center;
       min-width: 70px;
       min-height: 70px;
+      box-shadow: 0 5px 20px 0 rgba(227, 184, 115, 0.5);
       background-color: #E3B873; }
 
 .clients {
