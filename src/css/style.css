@@ -751,6 +751,7 @@ img {
     background-color: #ffffff; }
 
 .control__section-title {
+  position: relative;
   margin-bottom: 2.214rem;
   margin-top: -30rem; }
 
