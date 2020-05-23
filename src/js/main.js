@@ -220,4 +220,6 @@ $(document).ready(function () {
             .add(myPlacemark)
     });
 
+    new WOW().init();
+
 });

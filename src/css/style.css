@@ -818,6 +818,9 @@ img {
 .types__section-title {
   margin-bottom: 2.21rem; }
 
+.types__section-heading {
+  margin-bottom: 1rem; }
+
 .card__text {
   position: relative;
   margin: 0 auto;
@@ -865,7 +868,9 @@ img {
 .design {
   background: linear-gradient(#ffffff 50%, #131313 50%); }
   .design__section-title {
-    margin-bottom: 1.579rem; }
+    margin-bottom: 1.6rem; }
+  .design__heading {
+    margin-bottom: 1rem; }
   .design__description {
     margin: auto;
     margin-bottom: 3.35rem;
@@ -878,8 +883,8 @@ img {
     color: #363636; }
   .design__card {
     position: relative; }
-    .design__card__text {
-      margin-top: -9.23rem; }
+    .design__card-text {
+      margin-top: -9.13rem; }
   .design-image-wrap {
     position: relative; }
     .design-image-wrap img {
@@ -894,7 +899,8 @@ img {
       background-color: rgba(19, 19, 19, 0.3); }
   .design__pricetag {
     text-align: left;
-    padding: 13.3px 0 13px 33.3px; }
+    padding: 13.3px 0 13px 33.3px;
+    bottom: -2rem; }
 
 .how-do-we-work {
   height: 16px;
@@ -930,7 +936,7 @@ img {
     line-height: 1.39;
     letter-spacing: -2.8px;
     color: #ffffff; }
-  .steps__swiper-slide--header {
+  .steps__swiper-slide-header {
     margin-top: 1.6rem;
     margin-bottom: 0.8rem;
     text-transform: uppercase;
@@ -943,7 +949,7 @@ img {
     line-height: 1.5;
     letter-spacing: normal;
     color: #E3B873; }
-  .steps__swiper-slide--text {
+  .steps__swiper-slide-text {
     max-width: 24.17rem;
     margin-top: 0.8rem;
     margin-bottom: 1rem;
@@ -955,7 +961,7 @@ img {
     line-height: 1.8rem;
     letter-spacing: normal;
     color: #ffffff; }
-    .steps__swiper-slide--text:last-child {
+    .steps__swiper-slide-text:last-child {
       margin-bottom: 6.2rem;
       max-width: 21.07rem; }
   .steps__swiper-button-prev, .steps__swiper-button-next {
@@ -1370,6 +1376,8 @@ img {
     margin-right: 1rem; }
   .hero__content {
     margin-left: 6rem; }
+  .hero__title {
+    max-width: 39.28rem; }
   .design__pricetag {
     text-align: left;
     padding: 17.8px 0 13px 33.3px; } }
@@ -1387,6 +1395,8 @@ img {
     display: none; }
   .hero__content {
     margin-left: 0; }
+  .projects:after {
+    display: none; }
   .row {
     flex-direction: column;
     align-items: center; }
@@ -1571,11 +1581,13 @@ img {
     padding: 0.8rem 2.4rem; }
   .types__section-title {
     margin-bottom: 3.31rem; }
+  .types__section-heading {
+    margin-bottom: 1.2rem; }
   .design__description {
     font-size: 15px;
     line-height: 1.36;
     max-width: 303px;
-    margin-bottom: 2.9rem; } }
+    margin-bottom: 3.1rem; } }
 
 @media screen and (max-height: 615px) {
   .hero__scroll-down {
