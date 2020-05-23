@@ -2,6 +2,7 @@ $(document).ready(function () {
     const modal = $('.modal'),
         modalBtn = $('[data-toggle=modal]'),
         closeBtn = $('.modal__close');
+        modalDialog = $('.modal__dialog');
 
 
     modalBtn.on('click', function () {
@@ -227,8 +228,10 @@ $(document).ready(function () {
 
         myMap.geoObjects
             .add(myPlacemark)
+        myMap.behaviors.disable('scrollZoom');
     });
 
     new WOW().init();
+
 
 });
