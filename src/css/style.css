@@ -903,20 +903,19 @@ img {
     padding: 13.3px 0 13px 33.3px;
     bottom: -2rem; }
 
-.how-do-we-work {
-  height: 16px;
-  font-family: "Futura Demi", sans-serif;
-  font-size: 15px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-transform: uppercase; }
-
 .steps {
   padding-top: 0;
   overflow: hidden; }
+  .steps__subtitle {
+    height: 16px;
+    font-family: "Futura Demi", sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-transform: uppercase; }
   .steps__row {
     display: flex;
     justify-content: space-between; }
