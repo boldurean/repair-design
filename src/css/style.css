@@ -354,7 +354,7 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked + .policy__label:before {
+  .policy__checkbox:checked ~ .policy__label:before {
     background: #E3B873 url("../img/modal/checked.svg") no-repeat center/10px; }
 
 .policy__label {
@@ -405,12 +405,13 @@ template {
     color: #131313; }
 
 div.invalid {
-  padding-top: 1rem;
+  bottom: -0.571rem;
+  position: absolute;
   color: tomato;
   border-bottom: none; }
 
-.invalid {
-  border-bottom: 1px solid red; }
+div #policyCheckbox-error {
+  bottom: -1.5rem; }
 
 .container {
   width: 88%;
@@ -1245,6 +1246,7 @@ img {
   .footer__input {
     padding-top: 0.3rem; }
     .footer__input-group {
+      position: relative;
       display: flex;
       flex-direction: column;
       flex-basis: 45%;
@@ -1332,7 +1334,8 @@ img {
     max-width: 36.36rem;
     padding: 2.357rem 3.6rem 1.928rem;
     color: #ffffff;
-    background: #131313 url("../img/modal/bg-lines.svg") no-repeat center; }
+    background: #131313 url("../img/modal/bg-lines.svg") no-repeat center;
+    background-size: cover; }
   .modal__close {
     position: absolute;
     margin: 12px 13px;
@@ -1355,13 +1358,15 @@ img {
     display: flex;
     flex-direction: column; }
   .modal__policy {
+    position: relative;
     margin-bottom: 2.7rem; }
   .modal__input-group {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 3.328rem; }
-  .modal__input:last-of-type {
-    margin-bottom: -0.2rem; }
+    .modal__input-group:nth-child(3) {
+      margin-bottom: -0.2rem; }
   .modal__input:nth-of-type(2) {
     margin-bottom: 3.3rem; }
   .modal__button {

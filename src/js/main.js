@@ -135,55 +135,64 @@ $(document).ready(function () {
         $(prevSlide).addClass('not-active');
     });
 
-    //валидация формы
-    $('.modal__form').validate({
-        errorClass: 'invalid',
-        errorElement: 'div',
-        rules: {
-            // срочное правило
-            userName: {
-                required: true,
-                minlength: 2,
-                maxlength: 15
+    //валидация формы в модальном окне.
+    $( "form" ).each( function() {
+        $(this).validate({
+            errorElement: "div",
+            errorClass: "invalid",
+            rules: {
+                userName: {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 15
+                },
+                userPhone: {
+                    required: true,
+                },
+                userEmail: {
+                    required: true,
+                    email: true
+                },
+                userQuestion: {
+                    required: true,
+                    minlength: 15
+                },
+                policyCheckbox: "required"
             },
-            userPhone: "required",
-            // правило-объект
-            userEmail: {
-                required: true,
-                email: true
-            }
-        }, //сообщения
-        messages: {
-            userName: {
-                required: "Заполните поле",
-                minlength: "Имя должно быть не короче 2-х букв",
-                maxlength: "Имя не должно быть длиннее 15-и букв"
+            //сообщения
+            messages: {
+                userName: {
+                    required: "Заполните поле",
+                    minlength: "Имя должно быть не короче 2 букв",
+                    maxlength: "Имя должно быть не длинее 15 букв"
+                },
+                userPhone: {
+                    required: "Заполните поле",
+                    minlength: "Введите полный номер телефона"
+                },
+                userEmail: {
+                    required: "Заполните поле",
+                    email: "Введите корректный Email в формате name@domain.com"
+                },
+                userQuestion: {
+                    required: "Задайте Ваш вопрос",
+                    minlength: "Вопрос должен быть не короче 15 символов"
+                },
+                policyCheckbox: "Примите соглашение"
             },
-            userPhone: "Заполните поле",
-            userEmail: {
-                required: "Заполните поле",
-                email: "Введите корректный email",
-            }
-        }
+
+        });
     });
+
+    //Кнопка возвращение на главную из thanks.html
+    $(".thanks-button").onclick = function () {
+        location.href = "index.html";
+    };
+
 
     //маска для номера телефона
-    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона"});
 
-
-    $(".modal__form").validate({
-        highlight: function(element, errorClass, validClass) {
-            $(element).addClass(errorClass).removeClass(validClass);
-            $(element.form).find("label[for=" + element.id + "]")
-                .addClass(errorClass);
-        },
-        unhighlight: function(element, errorClass, validClass) {
-            $(element).removeClass(errorClass).addClass(validClass);
-            $(element.form).find("label[for=" + element.id + "]")
-                .removeClass(errorClass);
-        }
-
-    });
 
     //  yandex map api
     ymaps.ready(function () {

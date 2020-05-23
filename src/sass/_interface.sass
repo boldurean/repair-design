@@ -38,7 +38,7 @@
   &__checkbox
     opacity: 0
     visibility: hidden
-    &:checked + .policy__label
+    &:checked ~ .policy__label
       &:before
         background: $primary url("../img/modal/checked.svg") no-repeat center / 10px
   &__label
@@ -94,12 +94,14 @@
 
 div
  &.invalid
-   padding-top: 1rem
+   bottom: -0.571rem
+   position: absolute
    color: tomato
    border-bottom: none
+ #policyCheckbox-error
+   bottom: -1.5rem
 
-.invalid
-  border-bottom: 1px solid red
+
 
 
 
