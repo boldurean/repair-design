@@ -47,6 +47,7 @@
   &__policy
     position: relative
     margin-bottom: 2.7rem
+    margin-top: 1.2px
   &__input
     &-group
       position: relative
@@ -61,3 +62,62 @@
     align-self: flex-end
     padding: 1.214rem 3.214rem
     border-radius: 0
+
+.modal-success
+  position: fixed
+  z-index: 200
+  opacity: 0
+  visibility: hidden
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($dark, 0.6)
+  display: flex
+  justify-content: center
+  align-items: center
+
+.success-dialog
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  max-width: 36.36rem
+  padding: 5rem 3rem
+  color: $light
+  background: $dark url("../img/modal/bg-lines.svg") no-repeat center
+  background-size: cover
+  text-align: center
+  &__title
+    margin: 0
+    font-family: $yoseva
+    text-transform: uppercase
+    font-size: 30px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.39
+    letter-spacing: normal
+    color: $primary
+  &__subtitle
+    font-family: $futuraBook
+    font-size: 25px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: normal
+    color: $light
+  &__link
+    text-decoration: none
+    &-icon
+      margin: 2rem
+      width: 45px
+      height: 45px
+
+.visible
+  opacity: 1
+  visibility: visible

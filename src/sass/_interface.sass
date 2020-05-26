@@ -70,6 +70,8 @@
   border-radius: 50%
   transition: box-shadow 0.3s
   z-index: 10
+  cursor: pointer
+  outline: none
   &:hover
     background: transparent url("../img/arrow-up-primary.svg") no-repeat center
     box-shadow: 0 5px 15px rgba($primary, 0.7)
@@ -94,12 +96,17 @@
 
 div
  &.invalid
-   bottom: -0.571rem
+   bottom: -1.27rem
    position: absolute
    color: tomato
    border-bottom: none
  #policyCheckbox-error
    bottom: -1.5rem
+
+input
+  &.invalid
+    border-bottom: 1px solid tomato
+
 
 
 

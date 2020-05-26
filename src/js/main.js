@@ -1,24 +1,28 @@
 $(document).ready(function () {
+
     const modal = $('.modal'),
         modalBtn = $('[data-toggle=modal]'),
-        closeBtn = $('.modal__close');
-        modalDialog = $('.modal__dialog');
-
+        closeBtn = $('.modal__close'),
+        modalSuccess = $('.modal-success'),
+        closeSuccess = $('.success-dialog__button');
 
     modalBtn.on('click', function () {
         modal.toggleClass('modal--visible');
     })
     closeBtn.on('click', function () {
         modal.toggleClass('modal--visible');
+
     })
     $(document).keydown(function (event) {
         if (event.keyCode === 27) {
             $(modal).removeClass('modal--visible');
+            $(modalSuccess).removeClass('visible')
         }
     });
     $(document).click(function (event) {
-        if ($(event.target).is(modal)) {
+        if ($(event.target).is(modal) || $(event.target).is(modalSuccess)) {
             $(modal).removeClass('modal--visible');
+            $(modalSuccess).removeClass('visible');
         }
     });
     //Проверим если скролла нет, тогда не показываем кнопку
@@ -67,77 +71,8 @@ $(document).ready(function () {
     bullets.css('left', prev.width() + 10);
 
 
-    //SWIPER ONE
-
-    const swiperStepsOne = new Swiper('.steps__swiper-container-one', {
-        pagination: {
-            el: '.steps__swiper-pagination--fraction',
-            type: 'fraction',
-        },
-        renderFraction: function (currentClass, totalClass) {
-            return '<span class="' + currentClass + '"></span>' +
-                ' of ' +
-                '<span class="' + totalClass + '"></span>';
-        },
-
-    });
-
-    //SWIPER TWO
-    const swiperStepsTwo = new Swiper ('.steps__swiper-container-two', {
-        pagination: {
-            el: '.steps__swiper-pagination--bullets',
-            type: 'bullets',
-        },
-
-        navigation: {
-            nextEl: '.steps__swiper-button-next',
-            prevEl: '.steps__swiper-button-prev',
-        },
-
-
-
-    });
-
-    //Контроллер вторым слайдером - первый
-    swiperStepsTwo.controller.control = swiperStepsOne;
-
-    const stepNext = $('.steps__swiper-button-next');
-    const stepPrev = $('.steps__swiper-button-prev');
-    const stepBullets = $('.steps__swiper-pagination--bullets');
-
-    stepNext.css('left', stepPrev.width() + 10 + stepBullets.width() + 35);
-
-    //Получаем кнопки + события по клику
-
-    $(".button-0").click(function () {
-        swiperStepsTwo.slideTo(0);
-    });
-    $(".button-1").click(function () {
-        swiperStepsTwo.slideTo(1);
-    });
-    $(".button-2").click(function () {
-        swiperStepsTwo.slideTo(2);
-    });
-    $(".button-3").click(function () {
-        swiperStepsTwo.slideTo(3);
-    });
-    $(".button-4").click(function () {
-        swiperStepsTwo.slideTo(4);
-    });
-    $(".button-5").click(function () {
-        swiperStepsTwo.slideTo(5);
-    });
-
-    //добавляем и убираем нужный класс чтобы покрасить активный слайд в белый.
-    swiperStepsTwo.on('slideChange', function () {
-        let activeSlide = ('.button-' + swiperStepsTwo.realIndex);
-        let prevSlide = ('.button-' + swiperStepsTwo.previousIndex);
-        $(activeSlide).removeClass('not-active');
-        $(prevSlide).addClass('not-active');
-    });
-
-    //валидация формы в модальном окне.
-    $( "form" ).each( function() {
+    //валидация форм  на сайте
+    $("form").each( function() {
         $(this).validate({
             errorElement: "div",
             errorClass: "invalid",
@@ -149,6 +84,7 @@ $(document).ready(function () {
                 },
                 userPhone: {
                     required: true,
+                    minlength: 17
                 },
                 userEmail: {
                     required: true,
@@ -160,7 +96,7 @@ $(document).ready(function () {
                 },
                 policyCheckbox: "required"
             },
-            //сообщения
+            //сообщения ошибок
             messages: {
                 userName: {
                     required: "Заполните поле",
@@ -181,15 +117,20 @@ $(document).ready(function () {
                 },
                 policyCheckbox: "Примите соглашение"
             },
-
+            submitHandler: function (form) {
+                $.ajax( {
+                    type: 'post',
+                    url: 'send.php',
+                    data: $(form).serialize(),
+                    success: function (response) {
+                        $(form)[0].reset();
+                        $(modal).removeClass('modal--visible');
+                        $(modalSuccess).addClass('visible')
+                    }
+                });
+            }
         });
     });
-
-    //Кнопка возвращение на главную из thanks.html
-    $(".thanks-button").onclick = function () {
-        location.href = "index.html";
-    };
-
 
     //маска для номера телефона
     $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона"});
@@ -199,7 +140,7 @@ $(document).ready(function () {
     ymaps.ready(function () {
         var myMap = new ymaps.Map('map', {
                 center: [47.244729, 39.723187],
-                zoom: 9,
+                zoom: 18,
                 controls: ['geolocationControl', 'zoomControl']
             }, {
                 searchControlProvider: 'yandex#search'
@@ -233,5 +174,8 @@ $(document).ready(function () {
 
     new WOW().init();
 
+    closeSuccess.on('click', function () {
+        modalSuccess.removeClass('visible')
+    })
 
 });

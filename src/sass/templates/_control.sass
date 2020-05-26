@@ -2,18 +2,24 @@
   &__section-title
     position: relative
     margin-bottom: 2.214rem
-    margin-top: -30rem
+    margin-top: -28.8rem
   &__video
     position: relative
     display: flex
-    margin: auto auto 4.428rem
+    margin: auto auto 4.228rem
     max-width: 58.357rem
     min-height: 31rem
     background: $dark url("../img/control/video-mask.jpg") no-repeat center
+    background-size: cover
     box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.15)
+    cursor: pointer
     &::before
       position: absolute
       content: ''
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
       width: 100%
       height: 100%
       background-color: rgba(black, 0.8)
@@ -22,12 +28,11 @@
     margin: auto auto 4.285rem
     text-align: center
     font-size: 1.428rem
-    line-height: 2.4rem
-
+    line-height: 2.48rem
     &:before
       display: block
       content: ''
-      margin: auto auto 2.5rem
+      margin: auto auto 2rem
       width: 55px
       height: 2px
       background-color: $primary
@@ -38,17 +43,25 @@
     max-width: 55rem
     margin: auto
   &__policy
+    display: flex
+    justify-content: center
+    position: relative
     flex-basis: 100%
     margin-top: 1.2rem
     &--label
+      font-family: $futuraBook
+      font-weight: normal
       justify-content: center
   &__input-group
+    position: relative
     display: flex
     flex-direction: column
     flex-basis: 30%
   &__label
-    margin-bottom: -7px
+    margin-bottom: -3px
   &__input
+    font-family: $futuraBook
+    font-weight: normal
     color: #363636
   &__button
     padding: 1.1rem 4.185rem
@@ -57,3 +70,4 @@
   &__play
     position: relative
     margin: auto
+    width: 17.6%
