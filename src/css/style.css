@@ -88,6 +88,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: dotted;
   text-decoration: dotted;
   /* 2 */ }
 
@@ -348,6 +349,14 @@ template {
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   background: transparent;
   padding: 0.5rem 0; }
+  .input--light::-webkit-input-placeholder {
+    color: #ffffff; }
+  .input--light::-moz-placeholder {
+    color: #ffffff; }
+  .input--light:-ms-input-placeholder {
+    color: #ffffff; }
+  .input--light::-ms-input-placeholder {
+    color: #ffffff; }
   .input--light::placeholder {
     color: #ffffff; }
 
@@ -694,6 +703,7 @@ img {
   .projects__swiper-wrapper--image {
     padding-top: 1.8rem; }
     .projects__swiper-wrapper--image img {
+      -o-object-fit: cover;
       object-fit: cover; }
   .projects__swiper-slide {
     display: flex;
@@ -1563,6 +1573,22 @@ img {
     .control__input {
       line-height: 1.39;
       border-bottom: solid 1px rgba(255, 255, 255, 0.3); }
+      .control__input::-webkit-input-placeholder {
+        font-size: 18px;
+        font-weight: 400;
+        color: #ffffff; }
+      .control__input::-moz-placeholder {
+        font-size: 18px;
+        font-weight: 400;
+        color: #ffffff; }
+      .control__input:-ms-input-placeholder {
+        font-size: 18px;
+        font-weight: 400;
+        color: #ffffff; }
+      .control__input::-ms-input-placeholder {
+        font-size: 18px;
+        font-weight: 400;
+        color: #ffffff; }
       .control__input::placeholder {
         font-size: 18px;
         font-weight: 400;
@@ -1619,6 +1645,14 @@ img {
         margin-bottom: 2rem; }
     .footer__label {
       font-size: 15px; }
+    .footer__input::-webkit-input-placeholder {
+      font-size: 18px; }
+    .footer__input::-moz-placeholder {
+      font-size: 18px; }
+    .footer__input:-ms-input-placeholder {
+      font-size: 18px; }
+    .footer__input::-ms-input-placeholder {
+      font-size: 18px; }
     .footer__input::placeholder {
       font-size: 18px; }
     .footer__policy {
@@ -1693,6 +1727,7 @@ img {
     padding-bottom: 27.8rem; }
     .projects__swiper-container--image {
       max-height: 19.428rem;
+      -o-object-fit: cover;
       object-fit: cover; }
     .projects__swiper-slide {
       overflow: hidden; }
@@ -1701,6 +1736,7 @@ img {
         .projects__swiper-slide__text:last-of-type {
           margin-bottom: 2.7rem; }
       .projects__swiper-slide img {
+        -o-object-fit: cover;
         object-fit: cover;
         height: 84%;
         padding-top: 1rem; }
