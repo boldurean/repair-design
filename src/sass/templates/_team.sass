@@ -1,22 +1,30 @@
 .team
   background: linear-gradient( $dark 55%, $light 45%)
   padding-bottom: 0
+  padding-top: 0.6rem
   &__description
-    margin: auto auto 7.314rem
+    margin: auto auto 3.214rem
     max-width: 32rem
-    line-height: 1.2
+    font-family: $futuraBook
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.36
+    letter-spacing: normal
     color: $light
   &__title
     margin-bottom: 1rem
-    &-img
-      margin-bottom: 1.642rem
+    &-image
+      margin-bottom: 1.442rem
   &__wrap
-    max-width: 75.928rem
+    max-width: 78.428rem
     min-height: 28rem
     display: flex
     justify-content: space-between
     flex-wrap: wrap
     margin: auto
+    padding-right: 2.5rem
+
   &__col
     width: 21.928rem
     height: 28rem
@@ -98,8 +106,9 @@
     letter-spacing: normal
     color: $light
   &__about
+    position: relative
     max-width: 40.571rem
-    margin: 7.142rem auto auto
+    margin: 8.542rem auto auto
     text-align: center
     font-family: $futuraBook
     font-size: 20px
@@ -109,5 +118,15 @@
     line-height: 1.7
     letter-spacing: normal
     color: #363636
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      height: 2px
+      width: 55px
+      top: -12px
+      left: 50%
+      margin-left: -27.5px
+      background-color: $primary
 
 

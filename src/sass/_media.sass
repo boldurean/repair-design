@@ -31,14 +31,21 @@
 
 
 @media screen and (max-width: 992px)
+  .header
+    background-color: $bg-mobile
   .nav
     display: none
   .hero
+    &:after
+      background-color: $bg-mobile
     &__instagram
       display: none
     &__content
       margin-left: 0
+    &__scroll-down
+      background-color: $bg-mobile
   .projects
+    background-color: $bg-mobile
     &:after
       display: none
   .row
@@ -48,7 +55,7 @@
       flex-direction: row
   .design
     padding-bottom: 0
-    background: $dark
+    background: $bg-mobile
     &__description
       max-width: 35.21rem
       color: $light
@@ -60,6 +67,9 @@
       &:before
         display: none
   .team
+    background: $bg-mobile
+    &__description
+      font-size: 15px
     &__wrap
       flex-direction: column
       align-items: center
@@ -67,7 +77,7 @@
     &__col
       min-width: 339px
       height: 392px
-      margin-bottom: 145px
+      margin-bottom: 112.3px
     &__card
       min-width: 304px
       width: 100%
@@ -85,9 +95,12 @@
       font-size: 18px
     &__position
       font-size: 18px
+      margin: 0 0 0.5rem
     &__experience
-      padding: 12px 30px
+      padding: 11px 30px 14.2px
       font-size: 13px
+    &__about
+      display: none
 
   .card
     &__pricetag
@@ -149,6 +162,10 @@
 
 
 @media screen and (max-width: 576px)
+  .header
+    background-color: $bg-mobile
+  .projects
+    background-color: $bg-mobile
   .container
     max-width: 90%
   .contacts
@@ -190,7 +207,7 @@
           max-width: 80%
   .control
     padding-bottom: 0
-    background-color: $black
+    background-color: $bg-mobile
     &__video
       min-height: 17.3rem
       margin-bottom: 2.228rem
@@ -227,6 +244,7 @@
       flex-basis: 100%
       padding: 1.4rem 2rem
       margin-bottom: -24px
+      border-radius: 0
   .types
     padding-bottom: 0
     padding-top: 5rem
@@ -247,15 +265,54 @@
       color: $light
   .clients
     display: none
+
   .footer
     padding-top: 0
-    background: $dark
+    background: $bg-mobile
     &__wrap
-      background: $dark
+      background: $bg-mobile
       max-width: 100%
       margin: 0
+      padding: 1.2rem 0 2.4rem 0
+    &__form
+      margin-bottom: 1.4rem
     &__title
+      margin-bottom: 4.614rem
       font-size: 20px
+    &__input-group
+      flex-basis: 100%
+      margin-bottom: 5.2rem
+      &--full-width
+        margin-bottom: 2rem
+    &__label
+      font-size: 15px
+    &__input
+      &::placeholder
+        font-size: 18px
+    &__policy
+      justify-content: flex-start
+      margin-left: -14px
+      margin-bottom: 5.6rem
+      &-label
+        font-size: 16px
+    &__button
+      flex-basis: 100%
+      padding: 1.4rem 2rem 1.3rem 2rem
+      font-size: 15px
+      border-radius: 0
+    &__menu
+      display: none
+  div
+    #policyCheckbox-error
+      margin-left: 13px
+  .location
+    &__map
+      max-height: 17.5rem
+      order: 1
+    &__header
+      order: 2
+    &__socials
+      order: 3
 
 
 
@@ -366,6 +423,13 @@
     &__pricetag
       bottom: -1.6rem
       padding: 0.9rem 3.8rem 0.8rem 3.8rem
+  .team
+    &__title
+      margin-bottom: 1rem
+      &-image
+        margin-bottom: 1.642rem
+    &__description
+      margin: auto auto 3.814rem
 
 @media screen and (max-width: 374px)
   .team
@@ -373,6 +437,7 @@
       flex-direction: column
       align-items: center
       width: 100%
+      padding: 0
     &__col
       min-width: unset
       width: 100%
