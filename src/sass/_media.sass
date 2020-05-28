@@ -24,10 +24,6 @@
       &-slide
         &__text
           flex-basis: 47.8%
-  .clients
-    &__card
-      &-photo
-        margin-right: 0.714rem
 
 
 @media screen and (max-width: 992px)
@@ -66,41 +62,6 @@
     &-image-wrap
       &:before
         display: none
-  .team
-    background: $bg-mobile
-    &__description
-      font-size: 15px
-    &__wrap
-      flex-direction: column
-      align-items: center
-      width: 100%
-    &__col
-      min-width: 339px
-      height: 392px
-      margin-bottom: 112.3px
-    &__card
-      min-width: 304px
-      width: 100%
-    &__photo
-      &-wrap
-        min-width: 304px
-        width: 100%
-    &__info
-      width: 233px
-      height: 137px
-      margin-left: -122px
-      bottom: -38.3px
-    &__name
-      padding: 20.6px 19px 6px 20px
-      font-size: 18px
-    &__position
-      font-size: 18px
-      margin: 0 0 0.5rem
-    &__experience
-      padding: 11px 30px 14.2px
-      font-size: 13px
-    &__about
-      display: none
 
   .card
     &__pricetag
@@ -119,16 +80,12 @@
         &--smaller
           max-width: 90%
 
-  .clients
-    padding-bottom: 15rem
+
     &-reviews
       flex-direction: column
       justify-content: center
     &__card
       margin-bottom: 8rem
-  .location
-    &__map
-      min-width: 100%
 
 
 @media screen and (max-width: 768px)
@@ -263,8 +220,7 @@
       max-width: 303px
       margin-bottom: 3.1rem
       color: $light
-  .clients
-    display: none
+
 
   .footer
     padding-top: 0
@@ -302,17 +258,32 @@
       border-radius: 0
     &__menu
       display: none
-  div
-    #policyCheckbox-error
-      margin-left: 13px
   .location
     &__map
-      max-height: 17.5rem
+      height: 255px
+      margin-bottom: 1.285rem
       order: 1
     &__header
+      font-size: 18px
+      font-weight: normal
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.39
+      letter-spacing: normal
+      color: $primary
       order: 2
     &__socials
       order: 3
+    &__icon
+      &--wrap
+        min-width: 39px
+        min-height: 39px
+        &:not(:last-child)
+          margin-right: 20px
+  #policyCheckbox-error
+    margin-left: 13px
+
+
 
 
 
@@ -423,50 +394,19 @@
     &__pricetag
       bottom: -1.6rem
       padding: 0.9rem 3.8rem 0.8rem 3.8rem
-  .team
-    &__title
-      margin-bottom: 1rem
-      &-image
-        margin-bottom: 1.642rem
-    &__description
-      margin: auto auto 3.814rem
+  .modal
+    &__button
+      align-self: center
 
-@media screen and (max-width: 374px)
-  .team
-    &__wrap
-      flex-direction: column
-      align-items: center
-      width: 100%
-      padding: 0
-    &__col
-      min-width: unset
-      width: 100%
-      max-width: 339px
-      max-height: 392px
-      margin-bottom: 145px
-    &__card
-      min-width: unset
-      width: 100%
-      max-width: 304px
-    &__photo
-      min-width: unset
-      max-width: 304px
-      &-wrap
-        min-width: unset
-        max-width: 304px
-    &__info
-      width: 233px
-      height: 137px
-      margin-left: -40.4%
-      bottom: -38.3px
-    &__name
-      padding: 20.6px 19px 6px 20px
-      font-size: 18px
-    &__position
-      font-size: 18px
-    &__experience
-      padding: 12px 30px
-      font-size: 13px
+
+@media screen and (max-height: 450px)
+  .modal
+    overflow: auto
+    height: 100%
+  .modal-success
+    overflow: auto
+    height: 100%
+
 
 
 //HEIGHT

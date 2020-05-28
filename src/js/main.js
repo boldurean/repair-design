@@ -125,7 +125,9 @@ $(document).ready(function () {
                     success: function (response) {
                         $(form)[0].reset();
                         $(modal).removeClass('modal--visible');
-                        $(modalSuccess).addClass('visible')
+                        $(modalSuccess).addClass('visible');
+                        ym(64377703,'reachGoal','request');
+                        return true;
                     }
                 });
             }
@@ -136,46 +138,38 @@ $(document).ready(function () {
     $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона"});
 
 
-    //  yandex map api
-    ymaps.ready(function () {
-        var myMap = new ymaps.Map('map', {
-                center: [47.244729, 39.723187],
-                zoom: 18,
-                controls: ['geolocationControl', 'zoomControl']
-            }, {
-                searchControlProvider: 'yandex#search'
-            }),
-
-            // Создаём макет содержимого.
-            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-            ),
-
-            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: 'Собственный значок метки',
-                balloonContent: 'Это красивая метка'
-            }, {
-                // Опции.
-                // Необходимо указать данный тип макета.
-                iconLayout: 'default#image',
-                // Своё изображение иконки метки.
-                iconImageHref: 'img/location.png',
-                // Размеры метки.
-                iconImageSize: [32, 32],
-                // Смещение левого верхнего угла иконки относительно
-                // её "ножки" (точки привязки).
-                iconImageOffset: [-5, -38]
-            });
-
-        myMap.geoObjects
-            .add(myPlacemark)
-        myMap.behaviors.disable('scrollZoom');
-    });
-
     new WOW().init();
 
     closeSuccess.on('click', function () {
         modalSuccess.removeClass('visible')
     })
 
+    let player;
+
+    $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '465',
+            width: '100%',
+            videoId: 'RHzzLqJWqHs',
+            events: {
+                'onReady': videoPlay,
+            }
+        });
+    })
+
+    function videoPlay(event) {
+        event.target.playVideo()
+    }
+
+    //показывать карту только когда докрутили до неё
+
+    const design = $('.design');
+    const designTop = design.offset().top;
+    $(window).bind('scroll',function() {
+        let windowTop = $(this).scrollTop();
+        if(windowTop > designTop) {
+            $('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab8ac4b9951bd0913ca60195d895117ad301fff4e1226cd192097af3b1951894b&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>')
+            $(window).unbind('scroll');
+        }
+    })
 });

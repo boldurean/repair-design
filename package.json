@@ -21,11 +21,16 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0",
     "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
     "node-sass": "^4.14.0"
   },
   "dependencies": {
     "browser-sync": "^2.26.7",
-    "gulp-shorthand": "^1.1.0"
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-shorthand": "^1.1.0",
+    "gulp-tinypng-compress": "^1.2.5"
   }
 }
