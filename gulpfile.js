@@ -1,7 +1,6 @@
 const {src, dest, watch, series} = require('gulp');
 const browserSync = require('browser-sync').create();
 const cleanCSS = require('gulp-clean-css');
-const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const autoprefixer = require('gulp-autoprefixer');
 const minify = require('gulp-minify');
@@ -64,7 +63,7 @@ function style() {
       .pipe(autoprefixer({
         cascade: false
       }))
-      .pipe(dest('./src/css'))
+      .pipe(dest('./dist/css'))
       .pipe(browserSync.stream())
 }
 
