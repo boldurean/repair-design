@@ -66,11 +66,11 @@ $(document).ready(function () {
           policyCheckbox: "required",
         },
         messages: {
-          userName: { required: "Заполните поле", minlength: "Имя должно быть не короче 2 букв", maxlength: "Имя должно быть не длинее 15 букв" },
-          userPhone: { required: "Заполните поле", minlength: "Введите полный номер телефона" },
-          userEmail: { required: "Заполните поле", email: "Введите корректный Email в формате name@domain.com" },
-          userQuestion: { required: "Задайте Ваш вопрос", minlength: "Вопрос должен быть не короче 15 символов" },
-          policyCheckbox: "Примите соглашение",
+          userName: { required: "Required", minlength: "At least 2 characters", maxlength: "Not more than 20 characters" },
+          userPhone: { required: "Required", minlength: "Full phone required" },
+          userEmail: { required: "Required", email: "Email has to be valid example: name@domain.com" },
+          userQuestion: { required: "required", minlength: "Has to be more 15 characters" },
+          policyCheckbox: "Accept the agreement",
         },
         submitHandler: function (t) {
           $.ajax({
@@ -84,7 +84,7 @@ $(document).ready(function () {
         },
       });
     }),
-    $("[type=tel]").mask("+7(000) 000-00-00", { placeholder: "Ваш номер телефона" }),
+    $("[type=tel]").mask("+7(000) 000-00-00", { placeholder: "Your phone:" }),
     new WOW().init(),
     n.on("click", function () {
       i.removeClass("visible");
