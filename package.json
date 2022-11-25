@@ -23,9 +23,9 @@
     "gulp-cssmin": "^0.2.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-minify": "^3.1.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "node-sass": "^7.0.0"
+    "node-sass": "^7.0.3"
   },
   "dependencies": {
     "browser-sync": "^2.27.10",
