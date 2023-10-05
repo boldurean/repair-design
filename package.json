@@ -18,7 +18,7 @@
   "homepage": "https://github.com/vsbdn/repair-design#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cssmin": "^0.2.0",
     "gulp-imagemin": "^8.0.0",
